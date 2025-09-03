@@ -1,0 +1,405 @@
+.back-button{
+    border: none;
+    background-color: transparent;
+    margin-left: 1%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+#back{
+    font-size: 20px;
+    color: #00557F;
+    
+}
+
+.bxs-chevron-left{
+    color: #00557F; 
+    font-size: 30px;
+}
+
+
+#bookDetails-container{
+    width: 90%; 
+    padding: 40px;
+    border-radius: 15px; 
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin: auto; 
+    background-color: white;
+    margin-bottom: 100px;
+}
+
+#bookDetails{
+    width: 100%;
+    display: flex;
+}
+
+#image{
+    width: 28%;
+    height: auto;
+    margin: 20px 30px 0px 50px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+/* 
+#description{
+    /* float: right;
+    font-size: 25px;
+    width: 60%; */
+
+
+#details{
+    list-style-type: none;
+    font-size: 1.7vw;
+    margin-top: 20px;
+    margin-left: 6%;
+    line-height: 1.6;
+    color: #00557F;
+}
+
+#available{
+    color: #C39A6F;
+}
+
+#availCopy{
+    color: #C39A6F;
+}
+
+#buttons{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    padding-top:30px;
+    margin-left: 20px;
+}
+
+.reserve{
+    background-color: #00557F;
+    color: white;
+    border: none;
+    padding: 6px 30px;
+    border-radius: 30px;
+    font-size: 1.5vw;
+}
+
+.favourite{
+    border: none;
+    background-color: transparent;
+    color: grey;
+    margin-left: 50px;
+    font-size: 2vw;
+}
+
+
+#summary{
+    width: 90%; 
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px; 
+    border: 1px solid #00557F;
+    margin-top: 5%;
+    background-color: white; 
+    line-height: 1.8;
+    color: #00557F;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#row1{
+    display: flex;
+    margin: 30px auto 0px;
+    width: 90%
+}
+
+
+h2{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+#rating{
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#star{
+    font-size: 25px;
+}
+
+/* #see-all{
+    display: flex;
+    justify-content: flex-end;
+} */
+
+#see-all-btn{
+    color: #00557F;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 30px;
+}
+
+#row2{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px;
+}
+
+.review-box{
+    border: 1px solid;
+    width: 49%;
+    height: 180px;
+    padding: 15px;
+}
+
+.reviewer-info{
+    display: flex;
+}
+
+.reviewer-details{
+    margin-left: 10px;
+}
+
+
+.profilePicture{
+    border: 0.3px solid gray;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 1px 1px 1px 2px;
+    }
+
+
+.reviewer-name{
+    display: flex;
+    text-align: start;
+    padding: 3px 0px 0px 5px;
+    font-size: 15px;
+}
+
+.course{
+    padding: 3px 0px 0px 5px;
+    font-size: 13px;
+}
+
+.star-rating{
+    font-size: 25px;
+    padding: 0px 0px 20px 15px;
+    color: grey;
+}
+
+.ind-rating{
+    padding: 3px 0px 0px 5px;
+    font-size: 12px;
+}
+
+
+
+.review-content{
+    margin: 15px;
+}
+
+#write-btn{
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #00557F;
+    margin: 20px 0px;
+    color: white;
+    font-size: 18px;
+}
+
+#write-review{
+    display: flex;
+    justify-content: end;
+}
+
+
+#review-textfield{
+    border: 1px solid;
+    height: 450px;
+    padding: 20px;
+    display:none;
+}
+
+#overall-title{
+    color: #00557F;
+    margin-bottom: 20px;
+    font-size: 25px;
+    }
+
+#overall-rating{
+    display: flex;
+}
+
+#overall-star{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+    
+    label[for=reviewText]{
+    color: #00557F;
+    font-size: 20px;
+    font-weight: 600;
+    }
+    
+    
+    .typingArea{
+    margin-top: 10px;
+    text-align: center;
+    }
+    
+    textarea {
+    resize: none;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #f8f8f8;
+    font-size: 18px;
+    height: 270px;
+    width: 100%;
+    }
+    
+    .submit-btn{
+    background-color: #26A823;
+    color: white;
+    border-style: none;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 8px;
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 130px;
+    float: right;
+    }
+
+    .submit-btn:hover{
+        background-color: #187116;
+    }
+
+    .cancel-btn{
+        background-color: #DB3030;
+        color: white;
+        border-style: none;
+        border-radius: 10px;
+        padding: 8px;
+        font-size: 1.4vw;
+        font-weight: 500;
+        margin-top: 20px;
+        width: 130px;
+        float: right;
+    }
+    
+    .cancel-btn:hover{
+        background-color: #AA2828;
+    }
+
+
+    #dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        }
+        
+        #dialog-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        }
+        
+        #dialog-content h2 {
+        font-size: 24px;
+        margin-top: 0;
+        color:rgba(195, 154, 111, 1)
+        }
+        
+        #dialog-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        }
+        
+        #dialog-content button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: #00557F;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        
+        #dialog-content button:hover {
+        background-color: #C39A6F;
+        }
+        
+        #dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        }
+        
+        #dialog-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        }
+        
+        #dialog-content h2 {
+        font-size: 24px;
+        margin-top: 0;
+        color:rgba(195, 154, 111, 1)
+        }
+        
+        #dialog-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        }
+        
+        #dialog-content button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: #00557F;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        
+        #dialog-content button:hover {
+        background-color: #C39A6F;
+        }
+        /* ---------- Dialog end ---------- */

@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Josefin Sans" , sans-serif;
+}
+
+body, html {
+margin: 0;
+padding: 0;
+min-height: 100%;
+position: relative; 
+background-color: #F5F5F5;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+#image{
+height: 60%;
+top: 8%;
+right: 0%;
+margin: 100px 90px;
+position: absolute;
+z-index: 0;
+}
+
+.signup-container {
+width: 40%; 
+min-width: 400px;
+padding: 25px;
+border-radius: 15px; 
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+margin: 50px 135px 50px 0; 
+background-color: white;
+z-index:9999;
+margin-left: 75px;
+}
+
+h2{
+color:#C39A6F;
+font-size: 38px;
+margin-top: 8px;
+margin-bottom: 20px;
+}
+
+h3{
+color: #00557F;
+font-size: 28px;
+margin-bottom: 13px;
+}
+
+hr.greyline{
+border-top: 0.5px solid;
+margin-bottom: 25px;
+opacity: 0.4;
+}
+
+.input-group {
+display: flex;
+flex-direction: column;
+margin: 15px 0 0 0;
+width: 100%;
+}
+
+.input-group label{
+display: flex;
+width: 100%;
+justify-content: start;
+margin-top: 5px;
+margin-bottom: 8px;
+color: #00557F;
+font-weight: 600;
+font-size: 18px;
+}
+
+.hide-icon{
+display: flex;
+flex-direction: row;
+width: 10%;
+justify-content: end;
+font-size: 20px;
+color: #00557F;
+}
+
+.hide-icon i{
+display: flex;
+flex-direction: row;
+width: fit-content;
+height: auto;
+color: #00557F;
+}
+
+.password-input{
+display: flex;
+flex-direction: row;
+width: 95%;
+border: 1.5px solid #ABABAB;
+border-radius: 5px;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+#password,#confirm_password{
+display: flex;
+width: 100%;
+font-size: 17px;
+box-sizing: border-box;
+outline: none;
+border: none;
+}
+
+#email,#user_id{
+display: flex;
+box-sizing: border-box;
+width: 95%;
+font-size: 17px;
+outline: none;
+border: 1.5px solid #ABABAB;
+border-radius: 5px;
+padding: 12px;
+box-sizing: border-box;
+margin-bottom: 10px;
+} 
+
+::placeholder{
+color: #ABABAB;
+}
+
+.check-box{
+display: flex;
+align-items: left;
+color:#C39A6F;
+margin-bottom: 25px;
+}
+
+.check-box label{
+padding-left: 7px;
+padding-top: 3px;
+}
+
+button {
+padding: 15px;
+cursor: pointer;
+width: calc(100% - 5px);
+background-color: #00557F;
+color: white;
+border-radius: 5px;
+border: none;
+font-weight: 650;
+font-size: 17px;
+margin-bottom: 18px;
+}
+
+button:hover{
+background-color: #C39A6F;
+}
+
+.links-group a,.links-group {
+color: #C39A6F;
+text-align: center; 
+text-decoration: none;
+margin-top: 15px;
+margin-bottom: 10px;
+font-size: 16px; 
+} 
+
+.links-group:hover a,.links-group:hover {
+color: #35291c;
+} 
+
+#dialog {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 9999;
+}
+#dialog-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 400px;
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+#dialog-content h2 {
+font-size: 24px;
+margin-top: 0;
+}
+#dialog-content p {
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+#dialog-content button {
+display: block;
+margin: 0 auto;
+padding: 10px 20px;
+background-color: #00557F;
+color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+#dialog-content button:hover {
+background-color: #C39A6F;
+}
+
+#contactForm { 
+z-index: 3;
+display: none;
+border: 6px solid salmon; 
+width: 400px;
+text-align: center;
+background: #fff;
+position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+overflow: scroll;
+}
+
+#contactForm input {
+font-family: inherit;
+text-transform: inherit;
+font-size: 10px;
+display: block;
+width: 280px;
+padding: .4em;
+margin: auto;
+}
+
+.submit-btn { 
+width: 140px;
+display: inline-block;
+
+background: teal;
+color: #fff;
+font-weight: 100;
+font-size: 1.2em;
+border: none;
+height: 30px;
+}
+#contactForm label{
+font-size: 10px;
+}
+
+.pwcondition{
+color: red;
+margin: 25px 6px 30px 6px;
+line-height: 1.3;
+font-size: 16px;
+}
+
+#tnc{
+color: #C39A6F;
+/* margin-left: 10px; */
+margin-right: 10px;
+}
+
+#tnc:hover{
+color: #63574b;
+}
+
+@media (max-width: 1400px){
+#image{
+display: none;
+}
+
+.signup-container{
+width: 50%; 
+min-width: 380px;
+padding: 25px;
+border-radius: 15px; 
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+margin: 50px auto; 
+background-color: white;
+z-index:1;
+}
+}

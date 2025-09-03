@@ -1,0 +1,231 @@
+const headerContainer = document.getElementById('header-container');
+const footerContainer = document.getElementById('footer-container');
+const sidebarContainer = document.getElementById('sidebar-container');
+const chatboxContainer = document.getElementById('chatbox-container');
+
+function loadContent(containerElement, url) {
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text(); 
+    })
+    .then(data => { 
+      containerElement.innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error fetching content:', error);
+    });
+}  
+
+function loadAllContent() {
+  loadContent(sidebarContainer, 'http://localhost:3000/userSidebar.html'); 
+  loadContent(headerContainer, 'http://localhost:3000/header2.html'); 
+  loadContent(footerContainer, 'http://localhost:3000/footer.html'); 
+  loadContent(chatboxContainer, 'http://localhost:3000/chatbox.html'); 
+  changBg()
+}
+
+window.addEventListener('DOMContentLoaded', loadAllContent);
+
+function changBg() {
+  setTimeout(() => {
+    var target=null; 
+    if (window.location.pathname.endsWith('userHome.html')) {
+      target = document.getElementById("homeUL");
+      if (target) {
+        target.style.backgroundColor='white';
+        target.style.borderRadius='6px'
+      }
+    }
+    else if (window.location.pathname.endsWith('userDashboard.html')) {
+      target = document.getElementById("dashboardUL");
+      if (target) {
+        target.style.backgroundColor='white';
+        target.style.borderRadius='6px'
+      }
+    }
+    else if (window.location.pathname.endsWith('userCurrent.html')) {
+      target = document.getElementById("currentUL");
+      if (target) {
+        target.style.backgroundColor='white';
+        target.style.borderRadius='6px'
+      }
+    }
+    else if (window.location.pathname.endsWith('userHistory.html')) {
+      target = document.getElementById("borrowUL");
+      if (target) {
+        target.style.backgroundColor='white';
+        target.style.borderRadius='6px'
+      }
+    }
+    else if (window.location.pathname.endsWith('userOverdue.html')) {
+      target = document.getElementById("overdueUL");
+      if (target) {
+        target.style.backgroundColor='white';
+        target.style.borderRadius='6px'
+      }
+    }
+    else if (window.location.pathname.endsWith('userReservation.html')) {
+      target = document.getElementById("reserveUL");
+      if (target) {
+        target.style.backgroundColor='white';
+        target.style.borderRadius='6px'
+      }
+    }
+    else if (window.location.pathname.endsWith('userJournal.html')) {
+      target = document.getElementById("journalUL");
+      if (target) {
+        target.style.backgroundColor='white';
+        target.style.borderRadius='6px'
+      }
+    }
+    else if (window.location.pathname.endsWith('userAddJournal.html')) {
+      target = document.getElementById("journalUL");
+      if (target) {
+        target.style.backgroundColor='white';
+        target.style.borderRadius='6px'
+      }
+    }
+    if(target){
+      const icon = target.querySelector('.icon');
+      if (icon) {
+        icon.style.color = '#C39A6F';
+      }
+      
+      const text = target.querySelector('.nav-text');
+      if (text) {
+        text.style.color = '#C39A6F';
+      }
+    }
+
+    fetch('http://localhost:3000/roleA', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ userId }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+          const role = data.borrowedBooksCount
+          if(role==="A"||role==="L"){
+              document.getElementById('userBadge').innerText = "Librarian";
+              const listItem = document.createElement('li');
+              listItem.classList.add('nav-link');
+              const anchor = document.createElement('a');
+              anchor.href = 'adminHome.html';
+
+              const switchIcon = document.createElement('i');
+              switchIcon.classList.add('bx', 'bx-toggle-left', 'icon');
+
+              const spanText = document.createElement('span');
+              spanText.classList.add('text', 'nav-text');
+              spanText.textContent = 'Switch to Admin Mode';
+
+              anchor.appendChild(switchIcon);
+              anchor.appendChild(spanText);
+
+              listItem.appendChild(anchor);
+
+              const menuContainer = document.querySelector('.menu');
+
+              menuContainer.appendChild(listItem);
+
+          }
+        } else {
+          document.getElementById('userBadge').innerText = "User";
+            console.error('Error retrieving role:', data.message);
+        }
+    })
+  }, 100); 
+} 
+
+function hover() {
+  setTimeout(() => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const tooltips = [];
+    
+    navLinks.forEach(link => {
+        link.addEventListener('mouseover', e => {
+            const tooltip = document.createElement('div');
+            tooltip.textContent = link.querySelector('.nav-text').textContent;
+            tooltip.style.position = 'fixed';
+            tooltip.style.background = '#333';
+            tooltip.style.color = '#fff';
+            tooltip.style.padding = '5px';
+            tooltip.style.borderRadius = '5px';
+            tooltip.style.zIndex = '1000';
+            tooltip.style.left = e.pageX + 'px';
+            tooltip.style.top = (e.pageY + 10) + 'px';
+            document.body.appendChild(tooltip);
+            tooltips.push(tooltip);
+        });
+    
+        link.addEventListener('mouseleave', e => {
+            tooltips.forEach(tooltip => tooltip.remove());
+            tooltips.length = 0;
+        });
+    });
+    
+
+  }, 500); 
+}
+hover();
+
+async function fetchProfilePic(userId) {
+  try {
+      const response = await fetch('http://localhost:3000/searchProfilePic', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ user_id: userId })
+      });
+      const data = await response.json();
+      if (data.success) {
+          const profilePicBase64 = data.pic[0].profile_pic_base64;
+
+          const imgElement = document.createElement('img');
+          imgElement.src = `data:image/png;base64, ${profilePicBase64}`;
+          imgElement.style.width = '100%';
+          imgElement.style.height='100%';
+          imgElement.style.borderRadius = '50%';
+          imgElement.alt = 'Profile Picture';
+          document.getElementById("profPic").appendChild(imgElement);
+      } else {
+          console.error('Error fetching profile picture:', data.message);
+      }
+  } catch (error) {
+      console.error('Error fetching profile picture:', error);
+  }
+} 
+fetchProfilePic(userId)
+
+if (userId) {
+  // Fetch total fines for the user
+  console.log(userId)
+  fetch('http://localhost:3000/findNameA', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ userId }),
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
+          const totalFines = data.borrowedBooksCount;
+          document.querySelector('.userName').innerText = totalFines;
+      } else {
+          console.error('Error retrieving total fines:', data.message);
+      }
+  })
+  .catch(error => {
+      console.error('Error retrieving total fines:', error);
+  });
+} else {
+  console.error('userId not found in sessionStorage');
+}

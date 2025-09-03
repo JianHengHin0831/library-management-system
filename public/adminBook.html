@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Books</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="adminBook.css">
+    <link rel="stylesheet" href="defaultAdmin.css">
+</head>
+<body> 
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+
+            <!-- Title Start -->
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bx-book icon'></i></span>
+                <h1>Books</h1>
+            </div>
+            <!-- Title End -->
+
+            <div class="rightButtons">
+                <!-- Notification start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification end -->
+
+                <!-- Help Button Start -->
+                <a href="adminHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="adminSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="adminProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge"></div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+
+            </div>
+        </div>
+        <!-- Nav End -->
+        
+        <!-- Search bar Start -->
+        <div class="search-block">
+            <div class="search">
+                <span class="icon"><i class='bx bx-search icon'></i></span>
+                <form class="search-form">
+                    <span class="search-bar"><input type="search" id="searchInput" name="search" placeholder="Search" required></span>
+                </form>
+            </div>
+        </div>
+        <!-- Search bar End -->
+        
+        <!-- Main Contents Start-->        
+        <div class="table-wrapper">
+            <table class="fl-table"></table>
+        </div>
+        <!-- Main Contents End -->
+
+        <!-- Contact Form Start -->
+        <div id="contactForm">
+            <div class="close-div" onclick="cancel()"></div>
+            <div class="contact-whole-form">
+                <h2>Edit Book</h2>
+                <div class="contact-wo-title">
+                    <form action="#"> 
+                        <div class="upload-image-block">
+                            <label class="contact-form-label" type="text"><b>Book Image</b></label>
+                            <div id="imagePreviewContainer">
+                                <span id="placeholderIcon">&#x1F4F7;</span>
+                                <p id="placeholderText">Upload an image</p>
+                                <img id="imagePreview" src="#" alt="Preview" style="display:none;">
+                            </div>
+
+                            <div id="uploadContainer">
+                                <label for="image" id="uploadButton">
+                                    <span id="uploadIcon"><i class='bx bx-camera' style="margin-right: 10px" ></i>Upload Image</span>
+                                </label>
+                                <input type="file" id="image" name="image" accept="image/*" required style="display: none;">
+                            </div>
+                        </div>
+
+                        <br>
+                        
+
+                        <div class="contact-form">
+                            <label class="contact-form-label"  for="accession_number"><b>Accession Number</b></label>
+                            <input type="text" placeholder="Enter Accession Number" name="accession_number" id="accession_number1" required readonly>
+                    
+                            <label class="contact-form-label" for="isbn"><b>ISBN</b></label>
+                            <input type="text" placeholder="Enter ISBN" name="isbn" id="isbn1" required readonly>
+                    
+                            <label class="contact-form-label" for="Title"><b>Title</b></label>
+                            <input type="text" placeholder="Enter Title" name="Title" id="title1" required>
+                    
+                            <label class="contact-form-label" for="Edition"><b>Edition</b></label>
+                            <input type="text" placeholder="Edition" name="Edition" id="edition1" required>
+                    
+                            <label class="contact-form-label" for="authors"><b>Authors</b></label>
+                            <input type="text" placeholder="Enter authors" name="authors" id="author1" required>
+                    
+                            <label class="contact-form-label" for="condition"><b>Copies Condition</b></label>
+                            <input type="text" placeholder="Enter condtion" name="condition" id="copies_condition1" required>
+                    
+                            <label class="contact-form-label" for="price"><b>Book Price</b></label>
+                            <input type="text" placeholder="Enter Book Price" name="price" id="price1" required>
+                    
+                            <label class="contact-form-label" for="location"><b>Location</b></label>
+                            <input type="text" placeholder="Enter Location" name="location" id="location1" required>
+                    
+                            <label class="contact-form-label" for="subject_area"><b>Subject Area</b></label>
+                            <input type="text" placeholder="Enter Subject Area" name="subject_area" id="subject_area1" required>
+                    
+                            <label class="contact-form-label" for="keywords"><b>Keywords</b></label>
+                            <input type="text" placeholder="Enter Keywords" name="keywords" id="keywords1" required>
+                    
+                            <label class="contact-form-label" for="imprint"><b>Imprint</b></label>
+                            <input type="text" placeholder="Enter Imprint" name="imprint" id="imprint1" required>
+                    
+                            <label class="contact-form-label" for="book_type"><b>Book Type</b></label>
+                            <input type="text" placeholder="Enter Book Type" name="book_type" id="book_type1" required>
+
+                            <label class="contact-form-label" for="summary"><b>Book Summary</b></label>
+                            <input type="text" placeholder="Enter Book Summary" name="summary" id="summary1" required>
+                        </div>
+                    
+                        <div class="contact-form-buttons">
+                            <button type="button" class="submit-btn"  onclick="updateBook()">Save Changes</button>
+                            <button type="button" class="cancel-btn"  onclick="cancel()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Form End -->
+
+        <div id="dialog" style="display:none;">
+            <div id="dialog-content">
+              <h2></h2>
+              <p></p>
+              <button onclick="hideDialog()">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+
+    <!-- Javascript --> 
+    <script src="mainAdmin.js"></script>
+    <script src="adminBook.js"></script> 
+    <script src="adminChatbox.js"></script>
+    <script src="notification.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body> 
+</html>

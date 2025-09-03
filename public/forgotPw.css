@@ -1,0 +1,87 @@
+.changePw-container{
+    width: 50%; 
+    padding: 40px;
+    border-radius: 15px; 
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin: 150px auto; 
+    background-color: white;
+}
+
+h2{
+    color:#00557F;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+hr.greyline{
+    border-top: 0.5px solid;
+    margin-bottom: 25px;
+    opacity: 0.4;
+  }
+
+.description{
+    margin-bottom: 40px;
+    color: #00557F;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 7px;
+    width: 100%;
+}
+
+.input-group label{
+    color: #00557F;
+    padding-left: 7px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+/* label {
+    display: block;
+    margin-bottom: 1px;
+}  */
+
+#email{
+    display: flex;
+    box-sizing: border-box;
+    width: calc(100% - 5px);
+    font-size: 17px;
+    outline: none;
+    border: 1.5px solid #ABABAB;
+    border-radius: 5px;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} 
+
+button{
+    padding: 15px;
+    cursor: pointer;
+    width: calc(100% - 5px);
+    background-color: #00557F;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+button:hover{
+    background-color: #C39A6F;
+}
+
+.links-group a,.links-group {
+    color: #C39A6F;
+    text-align: center; 
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 18px; 
+}
+

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="defaultUser.css">
+    <link rel="stylesheet" href="userProfile.css"> 
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bx-user icon'></i></span>
+                <h1>Profile</h1>
+            </div>
+            <div class="rightButtons">
+                <!-- Notification Start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification End -->
+
+                <!-- Help Button Start -->
+                <a href="userHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="userSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="userProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge">User</div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+            </div> 
+        </div>
+        <!-- Nav End -->
+
+        <div class="below-content">
+            
+            <!-- Help Block 1 start -->
+            <div class="help_block1">
+
+                <!-- Blue Title 1 and Image Block start -->
+                <div class="title1-block">
+                    <span class="help1">User Profile</span>
+                
+                    <!-- Image Upload start -->
+                    <div class="image-upload-block">
+
+                        <!-- Image Block start -->
+                        <div id="imagePreviewContainer">
+
+                            <!-- Placeholder start -->
+                            <div id="placeholderBlock" class="placeholder-block">
+                                <span id="placeholderIcon"><i class='bx bx-image' ></i></span>
+                                <p id="placeholderText">Upload Image</p>
+                            </div>
+                            <!-- Placeholder end -->
+
+                            <!-- Profilepic start -->
+                            <img id="imagePreview" src="#" alt="">
+                            <!-- Profilepic end -->
+                        </div>
+                        <!-- Image Block end -->
+
+                        <!-- Image Upload Button start -->
+                        <div id="uploadContainer">
+                            <label for="image" id="uploadButton">
+                                <span id="uploadIcon"><i class='bx bx-camera' style="margin-right: 10px" ></i></span> Upload Image
+                            </label>
+                            <input type="file" id="image" name="image" accept="image/*" required style="display: none;">
+                        </div>
+                        <!-- Image Upload Button end -->
+
+                    </div>
+                    <!-- Image Upload end -->
+
+                </div>
+                <!-- Blue Title and Image Block end -->
+
+                <!-- White Content 1 Block start -->
+                <div class="content1-block">
+                    <button id="changeDetail" class="change-button" onclick="changeDetails()"><i class='bx bx-check' style="margin-right: 8px;"></i>Save Changes</button>
+                    
+                    <!-- Content Detail 1 start -->
+                    <div class="help_details1">
+
+                        <!-- Name start -->
+                        <div class="name-block">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name">
+                        </div>
+                        <!-- Name end -->
+
+                        <!-- Email start -->
+                        <div class="email-block">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" disabled>
+                        </div>
+                        <!-- Email end -->
+                        
+                        <!-- Contact start -->
+                        <div class="contact-block">
+                            <label for="contact">Contact Number:</label>
+                            <input type="tel" id="contact">
+                        </div>
+                        <!-- Contact end -->
+
+                        <!-- Course start -->
+                        <div class="course-block">
+                            <label for="course">Course / Department:</label>
+                            <input type="text" id="course" disabled>
+                        </div> 
+                        <!-- Course end -->
+
+                        <!-- Degree start -->
+                        <div class="degree-block">
+                            <label for="degree">Degree:</label>
+                            <input type="text" id="degree" disabled>
+                        </div>
+                        <!-- Degree end -->
+
+                    </div>
+                    <!-- Content Detail 1 end -->
+
+                </div>
+                <!-- White Content 1 Block end -->
+
+            </div>
+            <!-- Help Block 1 end -->
+
+            <!-- Help Block 2 start -->
+            <div class="help_block2">
+
+                <!-- Blue Title 2 Block start -->
+                <div class="title2-block">
+                    <span class="lock-block"><i class='bx bx-lock lock-icon' ></i></span>
+                    <span class="help2">User Credential</span>
+                </div>
+                <!-- Blue Title 2 Block end -->
+
+                <!-- White content 2 Block start -->
+                <div class="content2-block">                        
+                    <!-- Content Detail 2 start -->
+                    <div class="help_details2">
+
+                        <!-- ID start -->
+                        <div class="id-block">
+                            <label for="user_id">User ID:</label>
+                            <input type="text" id="user_id" disabled>
+                        </div>
+                        <!-- ID start -->
+
+                        <!-- Password start -->
+                        <div class="password-block">
+                            <label for="password">Password:</label>
+                            <button id="changePW" class="change-button" onclick="changePassword()"><i class='bx bx-edit-alt' style="margin-right: 8px;"></i>Change Password</button>
+                        </div>
+                        <!-- Password end -->
+
+                        <!-- Role start -->
+                        <div class="role-block">
+                            <label for="role">Role:</label>
+                            <input type="text" id="role" disabled>
+                        </div>
+                        <!-- Role end -->
+
+                    </div>
+                    <!-- Content Detail 2 end -->
+
+                </div>
+                <!-- White content 2 Block end -->
+
+            </div>
+            <!-- Help Block 2 end -->
+
+        </div>
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="userProfile.js"></script>
+    <script src="mainUser.js"></script>
+    <script src="userChatbox.js"></script>
+    <script src="notification.js"></script>
+</body>
+</html>

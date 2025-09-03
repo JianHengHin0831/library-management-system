@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boxicons Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="adminSidebar.css">
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <!-- Logo Start -->
+            <div class="image-text">
+                <span class="image">
+                    <img src="img/liblogo.png" alt="Logo"> 
+                </span>
+            </div>
+            <!-- Logo End -->
+
+            <!-- Toggle Start -->
+            <i class='bx bx-chevron-right toggle' onclick="expand()"></i>
+            <!-- Toggle End -->
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <!-- Home Start -->
+                    <li class='nav-link' id="homeUL">
+                        <a href="adminHome.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <!-- Home End -->
+
+                    <!-- Dashboard Start -->
+                    <li class='nav-link' id="dashboardUL">
+                        <a href="adminDashboard.html">
+                            <i class='bx bxs-dashboard icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- Dashboard End -->
+
+                    <!-- Register & Catalogue Start -->
+                    <li class='nav-link'id="registerUL">
+                        <a href="adminCatalog.html">
+                            <i class='bx bx-edit icon'></i>
+                            <span class="text nav-text">Register & Catalogue</span>
+                        </a>
+                    </li>
+                    <!-- Register & Catalogue End -->
+
+                    <!-- Borrow & Return Start -->
+                    <li class='nav-link' id="borrowUL">
+                        <a href="adminBorrow.html">
+                            <i class='bx bx-book-reader icon' ></i>
+                            <span class="text nav-text">Borrow & Return</span>
+                        </a>
+                    </li>
+                    <!-- Borrow & Return End -->
+
+                    <!-- Books Start -->
+                    <li class='nav-link' id="bookUL">
+                        <a href="adminBook.html">
+                            <i class='bx bx-book icon' ></i> 
+                            <span class="text nav-text">Books</span>
+                        </a>
+                    </li>
+                    <!-- Books End -->
+                    
+                    <!-- Patrons Start -->                    
+                    <li class='nav-link' id="patronsUL">
+                        <a href="adminPatrons.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Users</span>
+                        </a>
+                    </li>
+                    <!-- Patrons End -->
+                    
+                    <!-- Circulation Start -->                    
+                    <li class='nav-link'id="circulationUL">
+                        <a href="adminCirculation.html">
+                            <i class='bx bx-history icon' ></i>
+                            <span class="text nav-text">Circulation</span>
+                        </a>
+                    </li>
+                     <!-- Circulation Start -->                    
+
+                     <!-- Overdue & Fines Start -->
+                    <li class='nav-link' id="overdueUL">
+                        <a href="adminOverdue.html">
+                            <i class='bx bx-dollar-circle icon' ></i>
+                            <span class="text nav-text">Overdue & Fines</span>
+                        </a>
+                    </li>
+                    <!-- Overdue & Fines End -->
+
+                    <!-- Acquisition Start -->
+                    <li class='nav-link' id="acquisitionUL">
+                        <a href="adminAcquisitionTable.html">
+                            <i class='bx bx-cart-alt icon' ></i>
+                            <span class="text nav-text">Acquisition</span>
+                        </a>
+                    </li>
+                    <!-- Acquisition End -->
+
+                    <!-- Reservation Start -->
+                    <li class='nav-link' id="reserveUL">
+                        <a href="adminReservation.html">
+                            <i class='bx bx-time-five icon' ></i>
+                            <span class="text nav-text">Reservation</span>
+                        </a>
+                    </li>
+                    <!-- Reservation End -->
+
+                    <!-- Report & Analytics Start -->
+                    <li class='nav-link' id="reportUL">
+                        <a href="adminReport.html">
+                            <i class='bx bx-line-chart icon' ></i>
+                            <span class="text nav-text">Report & Analytics</span>
+                        </a>
+                    </li>
+                    <!-- Report & Analytics End -->
+
+                    <!-- Check Journal start -->
+                    <li class="nav-link" id="journalUL">
+                        <a href="adminCheckJournal.html">
+                            <i class='bx bx-book-content icon'></i>
+                            <span class="text nav-text">Check Journal</span>
+                        </a>
+                    </li>
+                    <!-- Check Journal end -->
+
+                    <li class='nav-link'>
+                        <a href="userHome.html">
+                            <i class="bx bx-toggle-right icon"></i>
+                            <span class="text nav-text">Switch to Patron Mode</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <!-- Log Out Start -->
+                <li class='nav-link' >
+                    <a href="signIn.html">
+                        <i class='bx bx-exit icon' ></i>
+                        <span class="text nav-text">Log Out</span>
+                    </a>
+                </li>
+                <!-- Log Out End -->
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Javascript -->
+    <script src="adminSidebar.js"></script>
+</body>
+</html>

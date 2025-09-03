@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="adminHome.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="defaultAdmin.css">
+    
+</head> 
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <div class="home-page">
+            <!-- Nav Start -->
+            <div class="banner">
+                <div id="intro-nav">
+
+                    <!-- Title Start -->
+                    <div class="iconTitle">
+                        <span class="icons"><i class='bx bx-home-alt icon'></i></span>
+                        <h1>Home</h1>
+                    </div>
+                    <!-- Title End -->
+
+                    <div class="rightButtons">
+                        <!-- Notification start -->
+                        <div class="introNavButtons">
+                            <button class="notification-button" onclick="toggleDropdown()">
+                                <i class='bx bx-bell' ></i>
+                            </button>
+                            <div class="dropdown-content" id="notificationDropdown">
+                                <span class="notiTitle">Notifications</span>
+                                <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                                <div id="notificationList"></div>
+                            </div>
+                        </div>
+                        <!-- Notification end -->
+
+                        <!-- Help Button Start -->
+                        <a href="adminHelp.html" class="navBtns">
+                            <i class='bx bx-help-circle' ></i>
+                        </a>
+                        <!-- Help Button End -->
+
+                        <!-- Settings Button Start -->
+                        <a href="adminSettings.html" class="navBtns">
+                            <i class='bx bx-cog' ></i>
+                        </a>
+                        <!-- Settings Button End -->
+
+                        <!-- Profile Button Start -->
+                        <a href="adminProfile.html" class="profBtn">
+                            <button class="userProfile" >
+                                <div id="profPic"></div>
+                                <div>
+                                    <p class="userName"></p>
+                                    <div id="userBadge"></div>
+                                </div>
+                            </button>
+                        </a>
+                        <!-- Profile Button End -->
+
+                    </div>
+                </div>
+            </div>   
+            <!-- Nav End -->
+
+            <!-- Search start -->
+            <div class="search-section"  onclick="window.location.href = 'adminSearch.html';">
+                <div class="home-search-block" >
+                    <span class="icon"><i class='bx bx-search icon'></i></span>
+                    <form class="home-search-form">
+                        <div class="search-input-block" id="searchBar">
+                            <span class="home-search"><input type="text" id="searchInput" name="search" placeholder="Search any books here" required></span>
+                            <div id="searchHistoryDropdown" style="display: none;"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="search-button-block">
+                    <button class="search-button">Search</button>
+                </div>
+            </div>
+            <!-- Search end -->
+
+            <!-- Recommendation Start -->
+            <div class="recommendation">
+                <h2>Recommendation of the Week</h2>
+            </div>
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper"></div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div> 
+            <!-- Recommendation End -->
+
+
+            <div class="below-content">
+                <div class="inside-content">
+                    <!-- Most Borrowed Start -->
+                    <div class="most-borrowed">
+                        <!-- <div class="title"> -->
+                            <h2>Most Borrowed Book<hr class="underline"></h2>
+                        <!-- </div> -->
+                        <div class="book-list">
+                        </div>
+                    </div>
+                    <!-- Most Borrowed Start -->
+
+                    <!-- Today Start -->
+                    <div class="todays">
+
+                        <!-- Today Borrowed Start -->
+                        <div class="today-borrow-container">
+                            <div class="today-borrow-title">
+                                <h2>Today Borrowed Book</h2>
+                                <button class="see-all" onclick="window.location.href = 'adminCirculation.html';">See All</button>
+                            </div>
+                            
+                            <div class="borrowed-list">
+                                <!-- Borrow 1 Start -->
+                                <div class="borrow">
+                                    <div class="borrow-threecol">
+                                        <div class="image-content">
+                                            <div class="borrow-image">
+                                                <img src="icon/book_cover/book_cover1.png" alt="" class="borrow-img">
+                                            </div>
+                                        </div>
+                                        <div class="borrow-content-twocol">
+                                            <div class="borrow-content">
+                                                <span class="borrow-title">Javascript Programming Language</span>
+                                                <span class="borrow-author">By: Toal, Ray, Dionisio, John David</span>
+                                                <span class="borrow-borrower">Borrower: Ong Hui Shien</span>
+                                            </div>  
+                                            <div class="borrow-status">
+                                                <span class="status-bar">Borrowed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Borrow End -->
+
+                                <!-- Borrow 2 Start -->
+                                <div class="borrow">
+                                    <div class="borrow-threecol">
+                                        <div class="image-content">
+                                            <div class="borrow-image">
+                                                <img src="icon/book_cover/book_cover2.png" alt="" class="borrow-img">
+                                            </div>
+                                        </div>
+                                        <div class="borrow-content-twocol">
+                                            <div class="borrow-content">
+                                                <span class="borrow-title">Javascript Programming Language</span>
+                                                <span class="borrow-author">By: Toal, Ray, Dionisio, John David</span>
+                                                <span class="borrow-borrower">Borrower: Ong Hui Shien</span>
+                                            </div>  
+                                            <div class="borrow-status">
+                                                <span class="status-bar">Borrowed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Borrow End -->
+
+                                <!-- Borrow 3 Start -->
+                                <div class="borrow">
+                                    <div class="borrow-threecol">
+                                        <div class="image-content">
+                                            <div class="borrow-image">
+                                                <img src="icon/book_cover/book_cover3.png" alt="" class="borrow-img">
+                                            </div>
+                                        </div>
+                                        <div class="borrow-content-twocol">
+                                            <div class="borrow-content">
+                                                <span class="borrow-title">Javascript Programming Language</span>
+                                                <span class="borrow-author">By: Toal, Ray, Dionisio, John David</span>
+                                                <span class="borrow-borrower">Borrower: Ong Hui Shien</span>
+                                            </div>  
+                                            <div class="borrow-status">
+                                                <span class="status-bar">Borrowed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Borrow End -->
+
+                                <!-- Borrow 4 Start -->
+                                <div class="borrow">
+                                    <div class="borrow-threecol">
+                                        <div class="image-content">
+                                            <div class="borrow-image">
+                                                <img src="icon/book_cover/book_cover4.png" alt="" class="borrow-img">
+                                            </div>
+                                        </div>
+                                        <div class="borrow-content-twocol">
+                                            <div class="borrow-content">
+                                                <span class="borrow-title">Javascript Programming Language</span>
+                                                <span class="borrow-author">By: Toal, Ray, Dionisio, John David</span>
+                                                <span class="borrow-borrower">Borrower: Ong Hui Shien</span>
+                                            </div>  
+                                            <div class="borrow-status">
+                                                <span class="status-bar">Borrowed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Borrow End -->
+
+                            </div>
+                        </div>
+                        <!-- Today Borrowed End -->
+                        
+                        <!-- Today Returned Start -->
+                        <div class="today-return-container">
+                            <div class="today-return-title">
+                                <h2>Today Returned Book</h2>
+                                <button class="see-all" onclick="window.location.href = 'adminCirculation.html';">See All</button>
+                            </div>
+                            
+                            <div class="returned-list">
+                                <!-- Return 1 Start -->
+                                <div class="return">
+                                    <div class="return-threecol">
+                                        <div class="image-content">
+                                            <div class="return-image">
+                                                <img src="icon/book_cover/book_cover5.png" alt="" class="return-img">
+                                            </div>
+                                        </div>
+                                        <div class="return-content-twocol">
+                                            <div class="return-content">
+                                                <span class="return-title">Javascript Programming Language</span>
+                                                <span class="return-author">By: Toal, Ray, Dionisio, John David</span>
+                                                <span class="return-borrower">Borrower: Ong Hui Shien</span>
+                                            </div>  
+                                            <div class="return-status">
+                                                <span class="status-bar">Returned</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Return End -->
+
+                                <!-- Return 2 Start -->
+                                <div class="return">
+                                    <div class="return-threecol">
+                                        <div class="image-content">
+                                            <div class="return-image">
+                                                <img src="icon/book_cover/book_cover6.png" alt="" class="return-img">
+                                            </div>
+                                        </div>
+                                        <div class="return-content-twocol">
+                                            <div class="return-content">
+                                                <span class="return-title">Javascript Programming Language</span>
+                                                <span class="return-author">By: Toal, Ray, Dionisio, John David</span>
+                                                <span class="return-borrower">Borrower: Ong Hui Shien</span>
+                                            </div>  
+                                            <div class="return-status">
+                                                <span class="status-bar">Returned</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Return End -->
+
+                                <!-- Return 3 Start -->
+                                <div class="return">
+                                    <div class="return-threecol">
+                                        <div class="image-content">
+                                            <div class="return-image">
+                                                <img src="icon/book_cover/book_cover7.png" alt="" class="return-img">
+                                            </div>
+                                        </div>
+                                        <div class="return-content-twocol">
+                                            <div class="return-content">
+                                                <span class="return-title">Javascript Programming Language</span>
+                                                <span class="return-author">By: Toal, Ray, Dionisio, John David</span>
+                                                <span class="return-borrower">Borrower: Ong Hui Shien</span>
+                                            </div>  
+                                            <div class="return-status">
+                                                <span class="status-bar">Returned</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Return End -->
+
+                                <!-- Return 4 Start -->
+                                <div class="return">
+                                    <div class="return-threecol">
+                                        <div class="image-content">
+                                            <div class="return-image">
+                                                <img src="icon/book_cover/book_cover8.png" alt="" class="return-img">
+                                            </div>
+                                        </div>
+                                        <div class="return-content-twocol">
+                                            <div class="return-content">
+                                                <span class="return-title">Javascript Programming Language</span>
+                                                <span class="return-author">By: Toal, Ray, Dionisio, John David</span>
+                                                <span class="return-borrower">Borrower: Ong Hui Shien</span>
+                                            </div>  
+                                            <div class="return-status">
+                                                <span class="status-bar">Returned</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Return End -->
+                            </div>
+                        </div>
+                        <!-- Today Returned End -->
+                    </div>
+                    <!-- Today End -->
+
+                </div>
+            </div>   
+        </div>
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Swiper JS -->
+    <script src="swiper-bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="adminHome.js"></script>
+    <script src="carousel.js"></script>
+    <script src="mainAdmin.js"></script>
+    <script src="adminChatbox.js"></script>
+    <script src="notification.js"></script>
+</body>
+</html>

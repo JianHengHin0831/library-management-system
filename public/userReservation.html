@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reservation</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="userReservation.css"> 
+    <link rel="stylesheet" href="defaultUser.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bx-time-five icon'></i></span>
+                <h1>Reservation</h1>
+            </div>
+            <div class="rightButtons">
+                <!-- Notification Start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification End -->
+
+                <!-- Help Button Start -->
+                <a href="userHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="userSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="userProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge">User</div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+            </div> 
+        </div>
+        <!-- Nav End -->
+
+        <!--Search start -->
+        <div class="search-block">
+            <div class="search">
+                <span class="icon"><i class='bx bx-search icon'></i></span>
+                <form class="search-form">
+                    <span class="search-bar"><input type="search" id="searchInput" name="search" placeholder="Search" required></span>
+                </form>
+            </div>
+        </div>
+        <!--Search end -->
+
+        <!-- Main Contents Start-->
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead class="table-head">
+                <tr style="background-color: #00557F;">
+                    <th></th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Accession Number</th>
+                    <th>Publisher</th>
+                    <th>Location</th>
+                    <th>Availability</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="hello3">     
+                <tbody>
+            </table>
+        </div>
+        <!-- Main Contents End -->
+    </main>
+
+    <!-- Cancel Dialog Start -->
+     <div id="dialog" style="display:none;" onclick="hideDialog()">
+        <div id="dialog-content">
+            <h2></h2>
+            <p></p>
+            <p id="result"></p>
+            <div style="text-align: right;">
+                <button  id="confirm">Confirm</button>
+                <button id="cancel" onclick="hideDialog()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- Cancel Dialog Start -->
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Javascript -->
+    <script src="userReservation.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="mainUser.js"></script>  
+    <script src="userChatbox.js"></script>
+    <script src="notification.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

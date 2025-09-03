@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="signup.css"> 
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+    
+    <main>
+        <!-- Image Start -->
+        <img id = "image" src="img/welcome1.png" alt="welcome to our library icon">
+        <!-- Image End -->
+
+        <!-- Sign Up Box Start -->
+        <div class="signup-container">
+            <form action="#" method="POST" class="signup-form" id ="signupForm">
+                <h2>Welcome !</h2>
+                <h3>Sign Up</h3> 
+                <hr class="greyline">
+                <div class="input-group">
+                    <label for="email">Soton Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="username">University ID</label>
+                    <input type="text" id="user_id" name="username" placeholder="Enter your user id" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <!-- <span class="hide-icon"><i class='bx bxs-hide' ></i></span> -->
+                        <span onclick="togglePasswordVisibility(1)" class="hide-icon"><i class='bx bxs-show' id="togglePassword1"></i></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="cpassword">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm_password" name="cpassword" placeholder="Confirm password" required>
+                        <!-- <span class="hide-icon"><i class='bx bxs-hide' ></i></span> -->
+                        <span onclick="togglePasswordVisibility(2)" class="hide-icon"><i class='bx bxs-show' id="togglePassword2"></i></span>
+                    </div>
+                </div>
+                <div class="pwcondition">
+                    <p><b>*Password must :<br>
+                    • Include at least 1 uppercase, lowercase, number, symbol<br>
+                    • Be at least 8 characters</b>
+                    </p>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" id="tnc" name="tnc">
+                    <p>I agree to the&nbsp;</p><a href="../uploads/term.pdf" download id="tnc">Terms & Conditions</a><br> 
+                </div>
+                <button type="button" id="signUpForm" onclick="signUp()"><b>Sign Up</b></button>
+                <div class="links-group">
+                    <a href="signIn.html">Already Signed Up?</a>
+                </div>
+            </form>        
+        </div>
+        <!-- Sign Up Box End -->
+    </main>
+    
+    <!-- Error Dialogue Start -->
+    <div id="dialog" style="display:none;">
+        <div id="dialog-content">
+          <h2>Wrong Password or Email</h2>
+          <p>Your password or email is wrong !</p>
+          <button onclick="hideDialog()">Close</button>
+        </div>
+    </div>
+    <!-- Error Dialogue End -->
+    
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="signup.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

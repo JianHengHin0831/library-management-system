@@ -1,0 +1,541 @@
+/* ---------- Row 2 start ---------- */
+.row2{
+  display: flex;
+  width: 90%;
+  height: auto;
+  justify-content: center; 
+  margin: auto; 
+  margin-top: 30px;
+  }
+  
+  .browsingBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 auto 20px auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
+  
+  .browsing {
+  color: #00557F;
+  font-weight: Bold;
+  font-size: 25px;
+  margin: 20px;
+  opacity: 1;
+  text-align: left;
+  }
+  
+  .delete-btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  width: auto;
+  height: auto;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 10px;
+  background-color: #00557F;
+  border: none;
+  color: white;
+  margin: 30px 50px;
+  }
+  
+  .delete-btn:hover {
+  background-color:#C39A6F;
+  }
+  /* ---------- Row 2 end ---------- */
+  
+  /* ---------- Row 3 start ---------- */
+  .row3{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: auto;
+  justify-content: center; 
+  margin: auto; 
+  /* transition: ease-out 0.3s; */
+  margin-top: 80px;
+  }
+  
+  .headings {
+  display: flex;
+  width: auto;
+  color: #00557F;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px;
+  text-align: left;
+  }
+  
+  #book_borrow_limit, #book_borrow_duration, #renewl_limit, #student_fines_rate, #staff_fines_rate{
+  display: flex;
+  flex-direction: row;
+  width: 60px;
+  padding: 5px;
+  font-size: 18px;
+  }
+  
+  .units{
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  height: auto;
+  margin-left: 20px;
+  font-size: 23px;
+  font-weight: 500;
+  color: #00557F;
+  }
+  
+  .small-frame{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto auto 30px auto;
+  }
+  
+  .borrowLimitBlock{
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  height: 160px;
+  margin: auto auto auto 0;
+  background: rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 1;    
+  }
+  
+  .borrowDurationBlock{
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  height: 160px;
+  margin: auto;
+  background: rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 1;    
+  }
+  .renewLimitBlock{
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  margin: auto 0 auto auto;
+  height: 160px;
+  background: rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 1;    
+  }
+  /* ---------- Row 3 end ---------- */
+  
+  /* ---------- Row 4 start ---------- */
+  .row4{
+  display: flex;
+  justify-content: center;
+  width: 90%; 
+  margin: auto; 
+  margin-top: 20px;
+  }
+  
+  .finesDesc{
+  display: flex;
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 10px;
+  }
+  
+  .finesRateBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 25px;
+  }
+  
+  .student-small-frame{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto 30px auto;
+  }
+  
+  .staff-small-frame{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto 30px auto;
+  }
+  .student_fines_rate{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto 0 auto auto;
+  }
+  
+  .staff_fines_rate{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto auto auto 0;
+  }
+  
+  .finesDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 50px 0 50px;
+  color: #00557F
+  }
+  
+  .save-btn{
+  display: flex;
+  width: 90%;
+  justify-content: end; 
+  margin-top: 25px;
+  margin-left: 20px;
+  }
+  
+  #save{
+  height: auto;
+  background-color: #00557F;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  float: right;
+  }
+  
+  #save:hover{
+  background-color: #C39A6F;
+  }
+  /* ---------- Row 4 end ---------- */
+  
+  /* ---------- Row 5 start ---------- */
+  .row5{
+  width: 90%;
+  display: flex;
+  justify-content: center; 
+  margin: auto; 
+  margin-top: 80px;
+  }
+  
+  
+  .feedbackBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 25px;
+  }
+  /* ---------- Row 5 end ---------- */
+  
+  h2{
+  color: #00557F;
+  margin-bottom: 20px;
+  }
+  
+  label[for=feedback]{
+  color: #00557F;
+  font-size: 20px;
+  font-weight: 600;
+  }
+  
+  .typingArea{
+  margin-top: 10px;
+  text-align: center;
+  }
+  
+  textarea {
+  resize: none;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  font-size: 18px;
+  height: 270px;
+  width: 100%;
+  }
+  
+  .submit-btn{
+  background-color: #00557F;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  width: 130px;
+  float: right;
+  }
+  
+  .appearance,.browsing,.notification,.feedback {
+  display: block; 
+  margin-bottom: 10px;
+  }
+  
+  /* Scrollbar */
+  /* width */
+  ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 20px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+  background: #D2D2D2; 
+  border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+  background: #ABABAB; 
+  }
+  
+  #dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  }
+  
+  #dialog-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  #dialog-content h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color:rgba(195, 154, 111, 1)
+  }
+  
+  #dialog-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  }
+  
+  #dialog-content button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #00557F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  }
+  
+  #dialog-content button:hover {
+  background-color: #C39A6F;
+  }
+  
+  #dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  }
+  
+  #dialog-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  #dialog-content h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color:rgba(195, 154, 111, 1)
+  }
+  
+  #dialog-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  }
+  
+  #dialog-content button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #00557F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  }
+  
+  #dialog-content button:hover {
+  background-color: #C39A6F;
+  }
+  #main-contents {
+  margin-left: 0%;
+  margin-bottom: 100px; 
+  width: 100%;
+  transition: width 0.3s ease;
+  }
+  
+  #main-contents.expand {
+  margin-left: 200px;
+  margin-bottom: 100px;
+  width: calc(100% - 200px);
+  }
+  
+  @media (max-width: 930px) {
+  /* ---------- Main content start ---------- */
+  main{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  padding-left: 80px;
+  margin-left: 0%;
+  width: 100%;
+  transition: width 0.3s ease;
+  }
+  
+  main.expand {
+  padding-left: 80px;
+  }
+  
+  .row3{
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .borrowLimitBlock{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  background: rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 1;    
+  }
+  
+  .borrowDurationBlock{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  background: rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 1;    
+  }
+  
+  .renewLimitBlock{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  background: rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 1;    
+  }
+  
+  .student-small-frame{
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: start;
+      width: 90%;
+      margin: 20px auto 30px auto;
+      }
+      
+      .staff-small-frame{
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: start;
+      width: 90%;
+      margin: 20px auto 30px auto;
+      }
+      .student_fines_rate{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      width: 100%;
+      margin: auto 0 auto auto;
+      }
+      
+      .staff_fines_rate{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      width: 100%;
+      margin: 20px auto auto 0;
+      }
+      
+      .finesDetails{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      margin: 20px 50px 0 0;
+      color: #00557F
+      }
+  /* ---------- Main content end ---------- */
+  }
+  
+  @media (max-width: 1029px) {
+  .title{
+  display: none;
+  }
+  }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Journal</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="adminCheckJournal.css">
+    <link rel="stylesheet" href="defaultAdmin.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bx-book-content icon'></i></span>
+                <h1>Check Journal</h1>
+            </div>
+            <div class="rightButtons">
+                <!-- Notification Start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification End -->
+
+                <!-- Help Button Start -->
+                <a href="adminHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="adminSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="adminProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge"></div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+            </div> 
+        </div>
+        <!-- Nav End -->
+
+        <!--journal list start -->
+        <div class="journals">
+            <div id="journalContainer"></div>
+        </div>
+
+        </div>
+            <div id="dialog" style="display:none;">
+                <div id="dialog-content">
+                <h2></h2>
+                <p></p>
+                <button onclick="hideDialog()">Close</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <footer id="footer-container"></footer>
+
+<div id="dialog" style="display:none;">
+    <div id="dialog-content">
+      <h2></h2>
+      <p></p>
+      <button onclick="hideDialog()">Close</button>
+    </div>
+</div>
+
+<script src="https://unpkg.com/@zxing/library@latest"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="mainAdmin.js"></script>
+<script src="adminChatbox.js"></script>
+<script src="notification.js"></script>
+<script src="adminCheckJournal.js"></script>
+</body>
+</html>

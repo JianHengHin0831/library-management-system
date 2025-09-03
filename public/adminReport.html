@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Report & Analytics</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="adminReport.css">
+    <link rel="stylesheet" href="defaultAdmin.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start --> 
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+
+            <!-- Title Start -->
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bx-line-chart icon'></i></span>
+                <h1>Report & Analytics</h1>
+            </div>
+            <!-- Title End -->
+
+            <div class="rightButtons">
+                <!-- Notification start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification End -->
+
+                <!-- Help Button Start -->
+                <a href="adminHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="adminSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="adminProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge"></div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+
+            </div>
+        </div>
+        <!-- Nav End -->
+
+        <div id="report-container">
+            <p id="title">-</p>
+            
+            <div class="below-content">
+                <div class="chart-export">
+                    <!-- Nav start -->
+                    <div class="search-container" >
+                        <div id="container">
+                            <nav class="report-type" >
+                                <ul>
+                                    <li><a href="#" >Report Type</a>
+                                    <ul>
+                                        <li><a href="#">Pie Chart-Percantage</a>
+                                            <ul>
+                                                <li><a href="#">Borrowed Book</a>
+                                                <ul>
+                                                    <li><a href="#" onclick="showPieChart('Borrow','')">All</a></li>
+                                                    <li><a href="#" onclick="showPieChart('Borrow','Computer Science')">Computer Science</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Borrow','Engineering')">Engineering</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Borrow','Marketing')">Marketing</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Borrow','Business')">Business</a></li>
+                                                </ul></li>
+                                                <li><a href="#">Returned Book</a>
+                                                <ul>
+                                                    <li><a href="#" onclick="showPieChart('Return','')">All</a></li>
+                                                    <li><a href="#" onclick="showPieChart('Return','Computer Science')">Computer Science</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Return','Engineering')">Engineering</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Return','Marketing')">Marketing</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Return','Business')">Business</a></li>
+                                                </ul></li>
+                                                <li><a href="#">Overdue Book</a>
+                                                <ul>
+                                                    <li><a href="#" onclick="showPieChart('Overdue','')">All</a></li>
+                                                    <li><a href="#" onclick="showPieChart('Overdue','Computer Science')">Computer Science</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Overdue','Engineering')">Engineering</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Overdue','Marketing')">Marketing</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Overdue','Business')">Business</a></li>
+                                                </ul></li>
+                                                <li><a href="#">Reserved Book</a>
+                                                <ul>
+                                                    <li><a href="#" onclick="showPieChart('Reserve','')">All</a></li>
+                                                    <li><a href="#" onclick="showPieChart('Reserve','Computer Science')">Computer Science</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Reserve','Engineering')">Engineering</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Reserve','Marketing')">Marketing</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Reserve','Business')">Business</a></li>
+                                                </ul></li>
+                                                <li><a href="#">Patrons</a>
+                                                <ul>
+                                                    <li><a href="#" onclick="showPieChart('Patrons','')">All</a></li>
+                                                    <li><a href="#" onclick="showPieChart('Patrons','Computer Science')">Computer Science</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Patrons','Engineering')">Engineering</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Patrons','Marketing')">Marketing</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Patrons','Business')">Business</a></li>
+                                                </ul></li>
+                                                <li><a href="#">All Books</a>
+                                                <ul>
+                                                    <li><a href="#" onclick="showPieChart('Book','')">All</a></li>
+                                                    <li><a href="#" onclick="showPieChart('Book','Computer Science')">Computer Science</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Book','Engineering')">Engineering</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Book','Marketing')">Marketing</a></li>
+                                                    <li><a href="#"onclick="showPieChart('Book','Business')">Business</a></li>
+                                                </ul></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><a href="#">Bar Chart-Comparison </a>
+                                            <ul>
+                                                <li><a href="#">Compare By Year</a>
+                                                    <ul>
+                                                        <li><a href="#">Borrowed Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Borrow','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Borrow','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Returned Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Return','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Return','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Overdue Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Overdue','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Overdue','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Reserved Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Reserve','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Reserve','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Patrons</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Patrons','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Patrons','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">All Books</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Book','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Book','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Compare By Month</a>
+                                                    <ul>
+                                                        <li><a href="#">Borrowed Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Borrow','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Borrow','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Returned Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Return','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Return','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Overdue Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Overdue','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Overdue','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Reserved Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Reserve','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Reserve','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Patrons</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Patrons','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Patrons','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">All Books</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Book','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Book','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Compare By Date</a>
+                                                    <ul>
+                                                        <li><a href="#">Borrowed Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Borrow','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Borrow','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Borrow','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Returned Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Return','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Return','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Return','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Overdue Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Overdue','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Overdue','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Overdue','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Reserved Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Reserve','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Reserve','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Reserve','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Patrons</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Patrons','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Patrons','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Patrons','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">All Books</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showBarChart('Book','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showBarChart('Book','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showBarChart('Book','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                    </ul>
+                                        </li></ul></li>
+                
+                
+                                        <li><a href="#">Line Chart-Total Value </a>
+                                            <ul>
+                                                <li><a href="#">Compare By Year</a>
+                                                    <ul>
+                                                        <li><a href="#">Borrowed Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Borrow','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Borrow','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Returned Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Return','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Return','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Overdue Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Overdue','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Overdue','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Reserved Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Reserve','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Reserve','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Patrons</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Patrons','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Patrons','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">All Books</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Book','','year')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Book','Computer Science','year')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Engineering','year')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Marketing','year')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Business','year')">Business</a></li>
+                                                        </ul></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Compare By Month</a>
+                                                    <ul>
+                                                        <li><a href="#">Borrowed Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Borrow','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Borrow','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Returned Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Return','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Return','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Overdue Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Overdue','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Overdue','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Reserved Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Reserve','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Reserve','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Patrons</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Patrons','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Patrons','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">All Books</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Book','','month')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Book','Computer Science','month')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Engineering','month')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Marketing','month')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Business','month')">Business</a></li>
+                                                        </ul></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Compare By Date</a>
+                                                    <ul> 
+                                                        <li><a href="#">Borrowed Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Borrow','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Borrow','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Borrow','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Returned Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Return','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Return','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Return','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Overdue Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Overdue','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Overdue','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Overdue','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Reserved Book</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Reserve','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Reserve','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Reserve','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">Patrons</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Patrons','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Patrons','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Patrons','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                        <li><a href="#">All Books</a>
+                                                        <ul>
+                                                            <li><a href="#" onclick="showLineChart('Book','','date')">All</a></li>
+                                                            <li><a href="#" onclick="showLineChart('Book','Computer Science','date')">Computer Science</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Engineering','date')">Engineering</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Marketing','date')">Marketing</a></li>
+                                                            <li><a href="#"onclick="showLineChart('Book','Business','date')">Business</a></li>
+                                                        </ul></li>
+                                                    </ul>
+                                        </li></ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Nav end -->
+                    
+                    <!-- Chart start -->
+                    <div class="chart-block">
+                        <canvas id="chart"></canvas>
+                    </div>
+                    <!-- Chart end -->
+
+                    <!-- Button start -->
+                    <div class="export-buttons">
+                        <button id="exportButton1" onclick="exportPNG()">Export as PNG</button>
+                        <button id="exportButton2" onclick="exportPDF()">Export as PDF</button>
+                    </div>
+                    <!-- Button end -->
+                </div>
+
+                <div id="date1">
+                    <div class="initial-block">
+                        <div class="initial-year">
+                            <label for="initialYear" class="date-label" style="display: none;" id="initialYearLabel">Initial Year:</label>
+                            <select class="select-date" id="initialYear"></select>
+                        </div>
+
+                        <div class="initial-month">
+                            <label for="initialMonth"  class="date-label" style="display: none;" id="initialMonthLabel">Initial Month:</label>
+                            <select class="select-date" id="initialMonth"></select>
+                        </div>
+
+                        <div class="initial-day">
+                            <label for="initialDate" class="date-label" style="display: none;" id="initialDateLabel">Initial Date:</label>
+                            <select class="select-date" id="initialDate"></select>
+                        </div>
+                    </div>
+                    
+                    <br>
+
+                    <div class="last-block">
+                        <div class="last-year">
+                            <label for="lastYear" class="date-label" style="display: none;" id="lastYearLabel">Last Year:</label>
+                            <select class="select-date" id="lastYear"></select>
+                        </div>
+
+                        <div class="last-month">
+                            <label for="lastMonth" class="date-label" style="display: none;" id="lastMonthLabel">Last Month:</label>
+                            <select class="select-date" id="lastMonth"></select>
+                        </div>
+
+                        <div class="last-day">
+                            <label for="lastDate" class="date-label" style="display: none;" id="lastDateLabel">Last Date:</label>
+                            <select class="select-date" id="lastDate"></select>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <div id="reportDetails">
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+ 
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+    
+    <script src="notification.js"></script>
+    <script src="adminChatbox.js"></script>
+    <script src="adminReport.js"></script>
+    <script src="mainAdmin.js"></script>
+    <script>
+    function exportPDF() {
+        window.jsPDF = window.jspdf.jsPDF;
+        const canvas = document.getElementById("chart");
+        const pdf = new jsPDF();
+
+        const titleText = document.getElementById("title").textContent;
+        const titleWidth = pdf.getStringUnitWidth(titleText) * pdf.internal.getFontSize() / pdf.internal.scaleFactor;
+        const docWidth = pdf.internal.pageSize.getWidth();
+
+        // Calculate the x-coordinate to center the title
+        const titleX = (docWidth - titleWidth) / 2;
+
+        // Set font style to bold for the title
+        pdf.setFontSize(16);
+
+        // Calculate the y-coordinate for the title
+        const titleY = 20;
+
+        pdf.text(titleText, titleX, titleY);
+
+        const dataUrl = canvas.toDataURL('image/png');
+
+        const imgWidth = 180; // Set the desired width of the image
+        const imgAspectRatio = canvas.width / canvas.height;
+        const imgHeight = imgWidth / imgAspectRatio; // Calculate height to maintain aspect ratio
+
+        // Calculate the x-coordinate to center the image
+        const imgX = (docWidth - imgWidth) / 2;
+
+        // Add the image to the PDF, centering it horizontally
+        pdf.addImage(dataUrl, 'PNG', imgX, titleY + 20, imgWidth, imgHeight);
+
+        // Adjust startY to create a margin between the image and the table
+        const startY = titleY + imgHeight + 40; // Increase this value to add more margin
+        const reportTable = document.getElementById("reportDetails");
+        const tableData = [];
+        const headers = [];
+        const headerCells = reportTable.querySelectorAll("th");
+        headerCells.forEach(cell => {
+            headers.push(cell.textContent);
+        });
+        const rows = reportTable.querySelectorAll("tr");
+        for (let i = 1; i < rows.length; i++) {
+            const rowData = [];
+            const cells = rows[i].querySelectorAll('td');
+            cells.forEach(cell => {
+                rowData.push(cell.textContent);
+            });
+            tableData.push(rowData);
+        }
+        pdf.autoTable({
+            startY: startY,
+            head: [headers],
+            body: tableData
+        });
+
+        pdf.save('report.pdf');
+    }
+
+
+
+
+    </script>
+</body>
+</html>

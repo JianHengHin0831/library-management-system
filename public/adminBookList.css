@@ -1,0 +1,186 @@
+/* ----------Most Borrowed Start---------- */
+.search-books{
+display: flex;
+flex-direction: column;
+margin: 0px 55px;
+background-color: white;
+}
+
+.search-books .title{
+display: flex;
+/* right: 0; */
+width: 100%;
+background-color: #f5f5f5;
+/* color: #00557F; */
+}
+
+.search-books .title h2{
+padding: 20px 10px;
+font-size: 30px;
+color: #00557F;
+}
+
+.search-books .book-list{
+display: flex;
+background-color: white;
+width: 95%;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-gap: 10px 0;
+padding: 10px;
+
+}
+
+.book-list .book{
+width: 100%;
+max-width:100%; 
+margin: 0;
+background-color: white;
+}
+
+.book .image-content,
+.book .book-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 20px;
+}
+
+.book .image-content{
+position: relative;
+row-gap: 5px;
+padding: 25px 0;
+}
+
+.book-image{
+position: relative;
+height: 170px;
+width: 125px;
+background: #FFF;
+padding: 3px;
+}
+
+.book-image .card-img{
+height: 100%;
+width: 100%;
+object-fit: content;
+}
+
+.book-content .book-title{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-size: 16px;
+padding: 0 40px;
+font-weight: 500;
+height: 60px;
+color: black;
+text-align: center;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3; /* Number of lines to show */
+overflow: hidden;
+text-overflow: ellipsis;   /* Adds ellipsis (...) when the text overflows the container */
+}
+
+.book-content .book-author{
+font-size: 14px;
+padding: 10px 40px;
+font-weight: 400;
+color:#C39A6F;
+text-align: center;
+height: 40px;
+/* max-height: 100px; */
+color:#C39A6F;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2; 
+overflow: hidden;
+text-overflow: ellipsis;   /* Adds ellipsis (...) when the text overflows the container */
+}
+
+.view-button{
+font-size: 16px;
+color: #00557F;
+background-color: transparent;
+padding: 10px 16px;
+border-radius: 6px;
+margin: 14px;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-bottom: 20px;
+justify-content: center; 
+align-items: center;   
+text-align: center;
+border-radius: 20px;
+border: 1.5px solid #00557F;
+}
+
+.view-button:hover{
+background: #00557F;
+color: #FFF;
+}
+
+/* ----------Most Borrowed End---------- */
+
+@media only screen and (max-width:1300px) {
+.title{
+display: none;
+}
+
+.search-books .book-list{
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-gap: 10px 0;
+}
+}
+
+@media only screen and (max-width:1055px) {
+.title{
+display: none;
+}
+
+.search-books .book-list{
+grid-template-columns: 1fr 1fr 1fr ;
+grid-gap: 10px 0;
+}
+}
+
+@media only screen and (max-width:1100px) {
+.slide-content{
+margin: 0 10px;
+}
+
+.swiper-navBtn{
+display: none;
+}
+}
+
+@media only screen and (max-width:868px) {
+.inside-content{
+display: flex;
+flex-direction: column;
+column-gap: 20px;
+}
+}
+
+@media only screen and (max-width:790px) {
+.search-books .book-list{
+grid-template-columns: 1fr 1fr;
+grid-gap: 10px 0;
+min-width: 300px;
+}
+}
+
+@media only screen and (max-width:612px) {
+.search-books .book-list{
+grid-template-columns: 1fr;
+grid-gap: 10px 0;
+min-width: 300px;
+}
+
+}

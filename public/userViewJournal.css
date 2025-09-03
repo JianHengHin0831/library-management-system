@@ -1,0 +1,27 @@
+#journal{
+    width: 90%;
+    margin: 0px auto 200px;
+    border: 1px solid;
+    border-radius: 5px;
+    
+}
+
+#journalHeader{
+    background-color: #E1C8AD;
+    padding: 60px 20px;
+    background-size: cover;
+}
+
+h2{
+    font-size: 40px;
+    
+}
+
+#author{
+    margin-top: 20px;
+}
+
+.content{
+    padding: 20px;
+    font-size: 20px;
+}

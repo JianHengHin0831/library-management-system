@@ -1,0 +1,431 @@
+.table-wrapper{
+    width: 90%;
+    height: 600px;
+    overflow: auto;
+    border-radius: 10px; 
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin: auto; 
+    background-color: white;
+}
+
+.table-wrapper .table-head{
+    position: sticky;
+    width: 100%;
+    height: 50px;
+    background-color: #00557F;
+    position: sticky;
+    top: 0;
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 25px;
+}
+
+.fl-table thead th {
+    color: white;
+}
+
+.fl-table tr {
+    border-bottom: 1px solid #ABABAB;
+} 
+  
+  #contactForm { 
+    z-index: 9999;
+    display: none;
+    color: #00557F;
+    text-align: center;
+    line-height: 2;
+    position: fixed;
+    overflow: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 15px 25px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
+  
+  #contactForm input {
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    border: 2px solid #ccc;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: black;
+}
+  
+#contactForm button{
+    background-color: #00557F;
+    color: white;
+    padding: 5px 40px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    margin: 15px 10px 10px; 
+}
+
+  #contactForm label{
+    font-size: 15px;
+  }
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 9998; /* Ensure it's above other content */
+}
+
+
+
+  .mainBlocks{
+    /* border: 1px solid; */
+    width: 90%;
+    /* height: 1000px; */
+    display: flex;
+    justify-content: space-between; 
+    margin: auto;
+  }
+
+  .fines-title{
+    color: #00557F;
+    font-weight: Bold;
+    font-size: 25px;
+    text-align: left;
+
+  }
+
+
+  .fines-table-wrapper{
+    overflow: auto;
+    width: 100%;
+    height: 170px;
+    overflow: auto;
+    border-radius: 10px; 
+    margin: auto; 
+    background-color: white;
+    border: 1.5px solid rgba(0, 85, 127, .8);
+    
+}
+
+.fines-table-wrapper .fines-table-head{
+    position: sticky;
+    width: 100%;
+    background-color: #00557F;
+    position: sticky;
+    top: 0;
+}
+
+  .fines-table {
+    font-size: 16px;
+    font-weight: normal;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fines-table td, .fines-table th {
+    text-align: center;
+    padding: 10px;
+}
+
+.fines-table td {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.fines-table thead th {
+    color: white;
+}
+
+.fines-table tr {
+    border-bottom: 1px solid #ABABAB;
+} 
+
+  .calculateBlock {
+    width: 48%;
+    height: 250px;
+    /* background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    top: 65%;
+    left: 0px; */
+    /* overflow: hidden; */
+    background: rgba(255,255,255,1);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin-top: 30px;
+    padding: 30px;
+  }
+  
+.payBlock{
+    width: 48%;
+    height: 250px;
+    /* background-repeat: no-repeat;
+    background-position: center center; */
+    /* background-size: cover; */
+    /* opacity: 1; */
+    /* top: 65%;
+    left: 0px; */
+    background: rgba(255,255,255,1);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin-top: 30px;
+    padding: 30px;
+}
+.payBy{
+    color: #00557F;
+    font-weight: Bold;
+    font-size: 25px;
+    
+    text-align: left;
+}
+
+.paymentMethod, .payFines{
+    width: 100%;
+    padding: 10px;
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: 600;
+    border: 2px solid #00557F;
+    border-radius: 8px;
+    background-color: white;
+    color: #00557F;
+    align-items: center;
+}
+
+.paymentMethod:hover, .payFines:hover{
+    background-color: #00557F;
+    color: white;
+}
+
+/* .payFines{
+    background-color: #00557F;
+    color: white;
+} */
+
+.bxs-bank, .bx-wallet{
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+/* ----------Search block start ---------- */
+.search-block{
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px 40px 50px ;
+}
+ 
+/* ----------Searchbar start---------- */
+.search{
+    display: flex;
+    min-width: 300px;
+    max-width: 400px;
+    margin-left: 20px;
+    align-items: center;
+    border: 1px solid #00557F;
+    border-radius: 28px;
+    background: white;
+    box-sizing: content-box;
+    }
+    
+    .search .icon{
+    color: #00557F;
+    font-size: 25px;
+    margin: 5px 8px 5px 8px;
+    }
+    
+    .search .search-bar{
+    display: inline-flex;
+    width: auto;
+    color:#C39A6F;
+    box-sizing: content-box;
+    }
+    
+    .search input{
+    font-size: 20px;
+    color: var(--sidebar-color);
+    margin-left: 14px;
+    margin-right: 15px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 400px;
+    max-width: 450px;
+    }
+    /* ----------SearchBar End---------- */
+
+    @media (max-width: 828px) {
+        .title{
+        display: none;
+        }
+        
+        .search-block{
+        /* display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 70px;
+        margin: 0 50px 70px 40px; */
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            padding: 20px 0px;
+        }
+        
+        #intro-nav{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            padding: 20px 0px;
+            }
+        
+        .search{
+        display: flex;
+        width: 80%;
+        min-width: 250px;
+        align-items: center;
+        padding: 0;
+        margin: auto;
+        border: 1px solid #00557F;
+        border-radius: 28px;
+        background: white;
+        }
+        
+        .search .icon{
+        color: #00557F;
+        font-size: 25px;
+        margin: 5px;
+        }
+        
+        .search .search-form{
+        display: flex;
+        width: 90%;
+        }
+        
+        .search .search-bar{
+        display: flex;
+        width: 100%;
+        margin: 0;
+        color:#C39A6F;
+        }
+        
+        .search input{
+        display: flex;
+        width: 95%;
+        min-width: 70px;
+        font-size: 20px;
+        color: #00557F;
+        margin-left: 0;
+        margin-right: auto;
+        outline: none;
+        border: none;
+        background: transparent;
+        box-sizing: content-box;
+        }
+        
+        #searchInput1::placeholder,
+        #searchInput2::placeholder,
+        #searchInput3::placeholder{
+        content: "Search";
+        }
+        /* Search end */
+        }
+        
+        @media (max-width: 930px) {
+        /* ---------- Main content start ---------- */
+        main{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin-right: 0;
+        padding-left: 75px;
+        margin-left: 0%;
+        width: 100%;
+        transition: var(--tran-05);
+        }
+        
+        main.expand {
+        padding-left: 75px;
+        }
+        /* ---------- Main content end ---------- */
+        }
+        
+        @media (max-width: 992px) {
+
+            .calculateBlock, .payBlock {
+                width: 100%; /* Make them full width */
+                margin-top: 20px; /* Add some space between them */
+            }
+            .mainBlocks {
+                flex-direction: column; /* Stack the blocks vertically */
+                align-items: center; /* Center the blocks horizontally */
+            }
+
+
+        #contactForm { 
+        position: fixed;
+        display: none;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        top:50%;
+        left:50%;
+        z-index: 3;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        }
+        
+        .contact-whole-form{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        min-width: 300px;
+        height: 80%;
+        margin: auto;
+        overflow: scroll;
+        padding: 40px 20px;
+        z-index: 999;
+        border-radius: 5px;
+        background: #fff;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        }
+        
+        .contact-wo-title{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 30px auto;
+        }
+        }

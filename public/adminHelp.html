@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Help</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="adminHelp.css">
+    <link rel="stylesheet" href="defaultAdmin.css">
+</head>
+<body> 
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+
+            <!-- Title Start -->
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bx-help-circle'></i></span>
+                <h1>Help</h1>
+            </div>
+            <!-- Title End -->
+
+            <div class="rightButtons">
+                <!-- Notification start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification end -->
+
+                <!-- Help Button Start -->
+                <a href="adminHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="adminSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="adminProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge"></div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+
+            </div>
+        </div>
+        <!-- Nav End -->
+  
+        <!-- Main Contents Start-->
+        <div class="mainBlocks">
+            <!-- IT Staff info Start-->
+            <div class="it_block">
+                <span class="it">For any technicals issue, please email to: </span>
+                <div class="details">
+                    <div><img src="img/uosmIT.jpg" title="it_picture" id="ITpicture"></div>
+                    <div class="it_detail"><p><b>IT Department</b><br><b>Email :</b> ituosm@soton.ac.uk</p></div>
+                </div>
+            </div> 
+            <!-- IT Staff info End-->
+
+            <!-- Librarian info Start-->
+            <div class="lib_block">
+                <span class="lib">For any inquiries about library, please email to:</span>
+                <div class="details">
+                    <div id="LibPicture"></div>
+                    <div class="lib_detail"></div>
+                </div>
+            </div> 
+            <!-- Librarian info End-->
+        </div>
+
+        <!-- Guide Start-->
+        <div class="instructionsBlock">
+            <div class="help_block">
+                <span class="help">User Guide</span>
+                <button class="accordion">Sidebar</button>
+                <div class="panel">
+                    <p>(1) You can expand the sidebar to see the full text or close the sidebar for more space to view content.</p>
+                    <p>(2) You can scroll the sidebar down to see all the buttons that navigates to different pages.</p>
+                </div>
+
+                <button class="accordion">Home</button>
+                <div class="panel">
+                    <p>(1) You can click on any most borrowed books on the shelf to view the book details. </p>
+                    <p>(2) You can view the detail of any single most borrowed books in Book Details. </p>
+                    <p>(3) You can view today borrowing and returning record in right corner of the home page.</p>
+                </div>
+
+                <button class="accordion">Register & Catalog</button>
+                <div class="panel">
+                    <p>(1) You can register a new book by typing book ISBN and click ‘Find Book Information’ to get the book title, authors, publisher and keywords from the External Library </p>
+                    <p>(2) Once inserting all book information, you can click ‘Submit’ to insert new book information into the database.</p>
+                    <p>(3) You can click ‘Yes’ on ‘Another New Registration’ Confirmation Dialog to do a new book registration directly.</p>
+                    <p>(1) You can click ‘Generate Accession Number’ to let the system generate a unique accession number for a new copies automatically.</p>
+                    <p>Step 1: You can click ‘Scan Barcode’ to get the ISBN number automatically.
+                        Step 2: You can click ‘Allow’ to enable using your camera to read the ISBN number.
+                        Step 3: You can scan any book ISBN barcode by placing the book barcode in front of the camera.
+                        Step 4: The ISBN is scanned and will be shown in the ISBN textbox.</p>
+                </div>
+
+                <button class="accordion">Borrow & Return</button>
+                <div class="panel">
+                    <p>(1) Step 1: You can click ‘Scan Barcode’ to get the ISBN number automatically.
+                        Step 2: The ISBN is scanned and will be shown in the ISBN textbox.
+                    </p>
+                    <p></p>
+                </div>
+
+                <button class="accordion">Books</button>
+                <div class="panel">
+                    <p>(1) You can click ‘Edit’ to edit the book detail. (adminBooksEdit1)
+                        To upload an updated book image, you can click ‘Upload Image’ to insert image from your file explorer.
+                        You can edit any book info except accession number, and then click ‘Submit’ to update the book info.</p>
+                </div>
+
+                <button class="accordion">Users</button>
+                <div class="panel">
+                    <p>(1) You can click ‘View’ to check the user information or modify user role to either University Staff, Librarian or Senior Librarian.</p>
+                </div>
+
+                <button class="accordion">Overdue & Fines</button>
+                <div class="panel">
+                    <p>(1) You can click ‘Confirm Payment’ to updated the pending confirmation of payment completed by user can be updated from ‘Pending’ to ‘Completed’ and remove from the pending table.</p>
+                    <p>(2) You can enter any patrons/users ID to check and calculate the total fines. If there is any fines to pay, you can click either ‘Cash’, ‘E-Wallet’ or ‘Online Banking’ to complete payment.</p>
+                    <p>(3) As an admin of the library system, you can set bank account details or upload latest TNG QR Code for E-Wallet, and then click ‘Save Change’ to update latest account details. </p>
+                </div>
+
+                <button class="accordion">Report & Analytics</button>
+                <div class="panel">
+                    <p>(1) Step 1: You can select any report type to view by hovering through your choice. </p>
+                    <p>(2) Step 2: After selecting a report type, you can set the date range to generate your report. </p>
+                    <p>(3) Step 3: When an appropriate date range is set, the chart based on your chosen report type will be shown in the chart frame. </p>
+                    <p>(4) Step 4: You can click either ‘Export as PNG’ to export the chart shown as PNG or  ‘Export as PDF’ to export the chart shown as PDF.</p>
+                </div>
+
+                <button class="accordion">Profile</button>
+                <div class="panel">
+                    <p>(1) You can edit your name, contact number in the textbox or click ‘Upload Image’ to update your profile picture. Once completed editing, click Edit‘ to save change. (adminProfieEdit1)</p>
+                    <p>(2) You can click ‘Change Password’, so that you will be directed to ‘Forgot Password’ page to reset your password. (adminProfileChangePassword1)</p>
+                </div>
+
+                <button class="accordion">Settings</button>
+                <div class="panel">
+                    <p>(1) You can select either light mode or dark mode for your system appearance.</p>
+                    <p>(2) You can type your thoughts about the library system for providing any feedback for system update and advancement.</p>
+                    <p>(3) You can update the book borrow limit, book borrow duration, return date renewal limit or fines rate in Settings, and click ‘Save Change’ to update your changes. </p>
+                    <p>(4) You can type your thoughts about the library system for providing any feedback for system update and advancement.</p>
+                </div>
+
+                <button class="accordion">Notifications</button>
+                <div class="panel">
+                    <p>(1) You can view latest notifications from the system in Notifications and click ‘Mark All as Read’ to read all notifications. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructionsBlock">
+            <div class="help_block">
+                <span class="help">Frequently Asked Questions</span>
+                <button class="accordion">What is a UoSM Library Management System?</button>
+                <div class="panel">
+                    <p>UoSM Library Management System is a comprehensive platform designed to streamline library operations and 
+                            enhance user experience for both students and staff of the University of Southampton Malaysia. For users, 
+                            it offers features such as track and manage borrowed and returned books, reservation of books, fine payment, journal 
+                            writing, and more. For administrators, it offers functionalities like book registering and cataloging, borrowing and returning of books for patrons,
+                            resource, user, circulation and reservation management, acquisition tracking, report generation, and journal approval. This system serves as a centralized hub 
+                            for managing library resources efficiently.</p>
+                </div>
+
+                <button class="accordion">What should I do if I encounter any issues or have questions as an admin?</button>
+                <div class="panel">
+                    <p>If you encounter any issues or have questions, you can reach out to the university's IT
+                    support team for assistance. Contact information can be found on the help page.</p>
+                </div>
+
+                <button class="accordion"></button>
+                <div class="panel">
+                    <p></p>
+                </div>
+
+                <button class="accordion"></button>
+                <div class="panel">
+                    <p></p>
+                </div>
+
+            </div>
+        </div>
+        <!-- Guide End -->
+        <!-- Main Contents End-->
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+
+    <!-- Javascript -->
+    <script src="adminHelp.js"></script>
+    <script src="mainAdmin.js"></script>  
+    <script src="adminChatbox.js"></script>
+    <script src="notification.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

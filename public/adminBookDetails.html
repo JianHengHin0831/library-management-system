@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="adminBookDetails.css">
+    <link rel="stylesheet" href="defaultAdmin.css">
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div style="display: flex;">
+            <a href="userHome.html">
+                <i class='bx bxs-chevron-left' style="margin-top: 28px; margin-left: 28px;"></i>
+            </a>
+            <div id="intro-nav" style="margin-left: 12.5px;">
+                
+                <div class="iconTitle">
+                    <span class="icons"><i class='bx bx-book-open icon'></i></span>
+                    <h1>Book Details</h1>
+                </div>
+                <div class="rightButtons">
+                    <!-- Notification Start -->
+                    <div class="introNavButtons">
+                        <button class="notification-button" onclick="toggleDropdown()">
+                            <i class='bx bx-bell' ></i>
+                        </button>
+                        <div class="dropdown-content" id="notificationDropdown">
+                            <span class="notiTitle">Notifications</span>
+                            <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                            <div id="notificationList"></div>
+                        </div>
+                    </div>
+                    <!-- Notification End -->
+
+                    <!-- Help Button Start -->
+                    <a href="adminHelp.html" class="navBtns">
+                        <i class='bx bx-help-circle' ></i>
+                    </a>
+                    <!-- Help Button End -->
+
+                    <!-- Settings Button Start -->
+                    <a href="adminSettings.html" class="navBtns">
+                        <i class='bx bx-cog' ></i>
+                    </a>
+                    <!-- Settings Button End -->
+
+                    <!-- Profile Button Start -->
+                    <a href="adminProfile.html" class="profBtn">
+                        <button class="userProfile" >
+                            <div id="profPic"></div>
+                            <div>
+                                <p class="userName"></p>
+                                <div id="userBadge"></div>
+                            </div>
+                        </button>
+                    </a>
+                    <!-- Profile Button End -->
+                </div> 
+            </div>
+        </div>
+        <!-- Nav End -->
+        
+        <!-- Main Contents Start-->
+        <div id="bookDetails-container">
+            <div id="book-info">
+                <!-- Book Details Start -->
+                <div class="image-container">
+                    <img id='image' alt="Book Image">
+                    <button id="uploadDetail" class="change-button"><i class='bx bx-camera' style="margin-right: 8px;"></i>Upload Image</button>
+                    <input type="file" id="fileInput" accept="image/png" style="display: none;">
+                </div>
+                
+                <div id="bookDetails">
+                    <form>
+                        <div class="inputBlock">
+                            <label for="title">Title:</label>
+                            <input type="text" id="title">
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="authors">Authors:</label>
+                            <input type="text" id="authors">
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="edition">Edition:</label>
+                            <input type="text" id="edition">
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="publisher">Publisher:</label>
+                            <input type="text" id="publisher">
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="publicationDate">Publication Date:</label>
+                            <input type="" id="publicationDate">
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="imprint">Imprint:</label>
+                            <input type="text" id="imprint">
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="isbn">ISBN:</label>
+                            <input type="number" id="isbn" readonly>
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="subjectArea">Subject Area:</label>
+                            <select name="subjectArea" id="subjectArea" required>
+                                <option value="">Select Subject Area</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Business">Business</option>
+                                <option value="Engineering">Engineering</option>
+                            </select>
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="typeOfBook">Type of Book:</label>
+                            <select name="typeOfBook" id="typeOfBook" required>
+                                <option value="">Select Type of Book</option>
+                                <option value="Computer Science">Textbook</option>
+                                <option value="Reference Book">Reference Book</option>
+                                <option value="Others">Others</option>
+                            </select> 
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="location">Location:</label>
+                            <select name="location" id="location" required>
+                                <option value="">Select Book Shelf</option>
+                                <option value="SHELF01">SHELF01</option>
+                                <option value="SHELF02">SHELF02</option>
+                                <option value="SHELF03">SHELF03</option>
+                                <option value="SHELF04">SHELF04</option>
+                                <option value="SHELF05">SHELF05</option>
+                                <option value="SHELF06">SHELF06</option>
+                                <option value="SHELF03">SHELF07</option>
+                                <option value="SHELF04">SHELF08</option>
+                                <option value="SHELF05">SHELF09</option>
+                                <option value="SHELF06">SHELF10</option>
+                            </select>
+                        </div>
+
+                        <div class="inputBlock">
+                            <label for="callNumber">Call Number:</label>
+                            <input type="text" id="callNumber">
+                        </div>
+
+                        <div class="inputBlock">
+                            <h2 class="label">Keywords</h2>
+                            <div class="search-container">
+                                <div class="search-icon">
+                                    <i class='bx bx-search icon'></i>
+                                </div>
+                                <input type="text" class="search-input" placeholder="Search Keywords" id="keywords" style="width:200px;">
+                            </div>
+                        </div>
+                        <div id="keyword-area"></div>
+
+                    </form>
+                </div>
+            </div>
+            <!-- Book Details End -->
+
+            <div class="summary-div">
+                <label for="summary"><b>Summary</b></label>
+                <textarea placeholder="Enter summary" name="summary" id="summary" required></textarea>
+                <button id="changeDetail" class="change-button" onclick="updateBook()"><i class='bx bx-check' style="margin-right: 8px;"></i>Save Changes</button>
+            </div>
+            
+            <!-- Book Review Start -->
+            <div id="review">
+                <div id="row1">
+                    <h2 id="rate"></h2>
+                    <div id="rating">
+                        <i id="star1" class="fa fa-star"></i>
+                        <i id="star2" class="fa fa-star"></i>
+                        <i id="star3" class="fa fa-star"></i>
+                        <i id="star4" class="fa fa-star"></i>
+                        <i id="star5" class="fa fa-star"></i>
+                    </div>    
+                </div>
+              
+                <div class="slide-container swiper">
+                    <div id="row2" class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+                        </div>
+                        <div class="swiper-button-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-navBtn"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+        </div>
+        <!-- Main Contents End-->
+    </main>  
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <script src="swiper-bundle.min.js"></script>
+    <!-- Javascript -->
+    <script src="detailCarousel.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="mainAdmin.js"></script>  
+    <script src="adminChatbox.js"></script>
+    <script src="notification.js"></script>
+    <script src="adminBookDetails.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

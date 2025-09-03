@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="forgotPw.css"> 
+    <link rel="stylesheet" href="default.css"> 
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <main>
+        <!-- Change Password Box Start -->
+        <div class="changePw-container">
+            <form action="#" method="POST" class="changePw-form" id ="changePwform">
+                <h2>Change Password</h2>
+                <hr class="greyline">
+                <div class="description">
+                    <p>Please enter your Soton email address below.<br>
+                        We'll send you a verification code via your email.</p>
+                </div> 
+                <div class="input-group">
+                    <label for="email">Email Address</label><br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <button type="button" id="complete" onclick="go()"><b>Send Verification Code</b></button>
+                <div class="links-group">
+                    <a href="signIn.html">Back to Log In</a>
+                </div>
+            </form>
+        </div>
+        <!-- Change Password Box End -->
+    </main>
+    
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Javascript -->
+    <script src="forgotPw.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

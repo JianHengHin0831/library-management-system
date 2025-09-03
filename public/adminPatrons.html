@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Patrons</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="adminPatrons.css">
+    <link rel="stylesheet" href="defaultAdmin.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+
+            <!-- Title Start -->
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bx-group icon'></i></span>
+                <h1>Users</h1>
+            </div>
+            <!-- Title End -->
+
+            <div class="rightButtons">
+                <!-- Notification start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification end -->
+
+                <!-- Help Button Start -->
+                <a href="adminHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="adminSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="adminProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge"></div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+
+            </div>
+        </div>
+        <!-- Nav End -->
+
+        <div class="search-filter-block">
+            <!-- Search start -->
+            <div class="search-block">
+                <div class="search">
+                    <span class="icon"><i class='bx bx-search icon'></i></span>
+                    <form class="search-form">
+                        <span class="search-bar"><input type="search" id="searchInput" name="search" placeholder="Search any patrons here" required></span>
+                    </form>
+                </div>
+            </div>
+            <!-- Search end -->
+
+            <div class="filter-custom-select" id="customFilterSelect">
+                <div class="filter-select-selected">All
+                    <span class="filter-option-icon"><i class='bx bx-chevron-down'></i></span>
+                </div>
+                <ul class="filter-select-options">
+                    <li data-value="all">All</li>
+                    <li data-value="patron">Patron</li>
+                    <li data-value="librarian">Librarian</li>
+                </ul>
+                <select id="tableFilter" style="display: none;">
+                    <option value="all">All</option>
+                    <option value="patron">Patron</option>
+                    <option value="librarian">Librarian</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Contents Start -->
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead class="table-head">
+                <tr style="background-color: #00557F;">
+                    <th></th>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>Email Address</th>
+                    <th>Contact Number</th>
+                    <th>User Role</th>
+                    <th>Borrow Eligibility</th>
+                </tr>
+                </thead>
+                <tbody id = "hello4">
+            
+                <tbody>
+            </table>
+        </div> 
+        <!-- Main Contents End -->
+        
+        <div id="contactForm">
+            <div class="close-div" onclick="cancel()"></div>
+            <div class="contact-whole-form">
+                <h2>View Patron Profile</h2>
+                <div class="contact-wo-title">
+                    <form action="#">
+                        <p class="contact-form-label">User ID</p>
+                        <input id="a1" disabled></input>
+                        <p class="contact-form-label">User Name</p>
+                        <input id="a2"></input>
+                        <p class="contact-form-label">Email</p>
+                        <input id="a3" disabled></input>
+                        <p class="contact-form-label">Contact Number</p>
+                        <input id="a4"></input>
+                        <p class="contact-form-label">Borrow Availability</p>
+                        <input id="a5" disabled></input>
+                        <p class="contact-form-label">Department</p>
+                        <input id="a6"></input>
+                        <p class="contact-form-label">Degree</p>
+                        <input id="a7"></input>
+                        <p class="contact-form-label">User Role</p>
+                        <input id="a8"></input>
+                        <label for="userRole">Change User Role</label>
+                        <div id="customSelect" class="custom-select" style="display: none;">
+                            <!-- <label for="userRole">Change User Role</label> -->
+                            <div class="select-selected">Select User Role
+                                <span class="option-icon"><i class='bx bx-chevron-down'></i></span>
+                            </div>
+                            <ul class="select-options">
+                                <li data-value="university_staff">University Staff</li>
+                                <li data-value="librarian">Librarian</li>
+                                <li data-value="senior_librarian">Senior Librarian</li>
+                            </ul>
+                            <select id="userRole" style="display: none;">
+                                <option value="university_staff">University Staff</option>
+                                <option value="librarian">Librarian</option>
+                                <option value="senior_librarian">Senior Librarian</option>
+                            </select>
+                        </div>
+                        <div class="contact-form-buttons" id="buttonsContainer" style="display: none;">
+                            <button type="button" class="submit-btn" onclick="changeUserRole()">Update</button>
+                            <button type="button" class="cancel-btn"  onclick="cancel()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="mainAdmin.js"></script>
+    <script src="adminChatbox.js"></script>
+    <script src="notification.js"></script>
+    <script src="adminPatrons.js"></script>
+    <script>
+        const localRole = localStorage.getItem('role');
+
+        if (localRole === 'A') {
+            document.getElementById('customSelect').style.display = 'block';
+            document.getElementById('buttonsContainer').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

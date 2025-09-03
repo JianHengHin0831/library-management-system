@@ -1,0 +1,1600 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ---------- All start ----------- */
+*{
+font-family: 'Josefin Sans';
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root{
+--bg-black-100:#353535;
+--bg-blackA50:rgba(0, 85, 127, 1);
+--bg-black-20:white;
+}
+
+body{
+overflow: auto;
+margin:0;
+background-color: rgba(247, 247, 249, 1);
+}
+
+body.dark {
+--bg-black-100:#fff;
+--bg-black-50:#000;
+--bg-black-20:#eef0f4;
+}
+/* ---------- All end ----------- */
+
+/* ---------- Main Content start ---------- */
+main{
+display: flex;
+flex-direction: column;
+width: 100%;
+min-width: 100%;
+margin-right: 0;
+padding-left: 80px;
+margin-left: 0;
+transition: var(--tran-05);
+}
+
+main.expand {
+padding-left: 280px;
+transition: var(--tran-05);
+}
+/* ---------- Main Content end ---------- */
+
+
+
+/* ---------- Banner--Home page start -----------*/
+.home-page{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+min-width: 100%;
+margin: 0;
+}
+/* ---------- Banner--Home page end -----------*/
+
+
+
+/* ---------- Big Table start ---------- */
+.pending-table,
+.table-wrapper-1,
+.table-wrapper-2{
+margin: auto; 
+height: 500px;
+width: 90%;
+overflow: auto;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+background-color: white;
+}
+
+.pending-table .table-head,
+.table-wrapper-1 .table-head,
+.table-wrapper-2 .table-head{
+width: 100%;
+font-size: 20px;
+background-color: #00557F;
+position: sticky;
+top: 0;
+z-index: 1;
+}
+
+.pending-table .fl-table,
+.table-wrapper-1 .fl-table,
+.table-wrapper-2 .fl-table {
+border-radius: 5px;
+border-collapse: collapse;
+width: 100%;
+max-width: 100%;
+}
+
+.pending-table .fl-table td, 
+.pending-table .fl-table th,
+.table-wrapper-1 .fl-table td, 
+.table-wrapper-1 .fl-table th,
+.table-wrapper-2 .fl-table td, 
+.table-wrapper-2 .fl-table th {
+text-align: center;
+font-size: 18px;
+padding: 10px 25px;
+
+}
+
+.fl-table td {
+font-size: 16px;
+font-weight: 500;
+}
+
+.fl-table thead th {
+color: white;
+}
+
+.pending-table  .fl-table tr,
+.table-wrapper-1 .fl-table tr,
+.table-wrapper-2 .fl-table tr{
+border-bottom: 1px solid #ABABAB;
+margin: 10px;
+} 
+
+/* ---------- Big Table end ---------- */
+
+
+
+/* ---------- Pending, Overdue, Fines Block Start ---------- */
+.pending-block,
+.overdue-block,
+.fines-block{
+display: flex;
+flex-direction: column;
+margin-bottom: 80px;
+}
+
+.block-title{
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+padding-left: 5%;
+font-size: 30px;
+color: #00557F;
+}
+/* ---------- Pending, Overdue, Fines Block Start ---------- */
+
+
+
+/* ----------Search block start ---------- */
+.search-block{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 30px auto 50px auto;
+    }
+
+.search{
+display: flex;
+width: 60%;
+/* max-width: 700px; */
+/* min-width: 250px; */
+align-items: center;
+padding: 0;
+border: 1px solid #00557F;
+border-radius: 28px;
+background: white;
+}
+
+.search .icon{
+color: #00557F;
+font-size: 25px;
+margin: 5px 8px 5px 8px;
+}
+
+.search .search-form{
+display: flex;
+width: 100%;
+}
+.search .search-bar{
+display: flex;
+width: 100%;
+margin: 0;
+color:#C39A6F;
+}
+
+.search input{
+display: flex;
+width: 95%;
+font-size: 20px;
+color: #00557F;
+margin-left: 10px;
+margin-right: auto;
+outline: none;
+border: none;
+background: transparent;
+box-sizing: content-box;
+}
+/* ----------Search block end ---------- */
+
+
+
+/* ---------- Pending block start ----------- */
+
+/* ---------- Pending block end ----------- */
+
+
+
+/* ---------- Payment block start ---------- */
+.payment-block{
+display: flex;  
+flex-direction: column;
+margin-bottom: 80px;
+}
+
+.payment-block h1{
+color: #00557F; 
+font-size: 30px;
+font-weight: bold;
+margin-bottom: 40px;
+}
+
+/* ---------- specific patrons start ---------- */
+.specificPatrons{
+width: 100%;
+display: flex;
+flex-direction: column;
+margin: 0px 30px 80px 0;
+}
+
+
+
+.check-pay-block{
+display: flex;
+flex-direction: row;
+width: 90%;
+margin: auto;
+}
+
+.total-fines-label-button p,
+.changePayment b{
+color: #00557F;
+font-size: 20px;
+font-weight: bold;
+margin-right: 10px;
+align-items: center;
+justify-content: center;
+}
+
+#totalFines{
+color: black;
+font-size: 25px;
+margin-left: auto;
+}
+/* ---------- specific patrons end ---------- */
+
+/* ---------- change payment start ---------- */
+.changePayment{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.specific-block-title{
+display: flex;
+flex-direction: column;
+padding-left: 5%;
+margin-bottom: 20px;
+font-size: 30px;
+color: #00557F;
+}
+
+.change-bank-ewallet-block{
+display: flex;
+flex-direction: row;
+width: 90%;
+margin: auto;
+}
+
+.bank-ewallet-block{
+display: flex;
+flex-direction: column;
+width:59%;
+margin-right: auto;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+
+/* width: 40%; */
+background-color: white;
+border-radius: 15px;
+/* margin: auto; */
+}
+
+.bank-acc-set-block{
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+align-items: flex-start;
+justify-content: center;
+padding: 30px 0 0 40px;
+width:100%;
+}
+
+.set-title-button{
+display: flex;
+flex-direction: row;
+width: 100%;
+margin: auto;
+}
+
+.bank-acc-title,
+.wallet-acc-title{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+text-align: start;
+color: #C39A6F;
+font-size: 25px;
+}
+
+.bank-acc-title .icon,
+.wallet-acc-title .icon{
+color:#C39A6F;
+font-size:50px;
+margin-right: 20px;
+}
+
+#uploadButton{
+font-size: 16px;
+color: #00557F;
+background-color: transparent;
+padding: 10px 16px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.3s ease;
+border-radius: 20px;
+border: 1.5px solid #00557F;
+/* margin-bottom: 20px; */
+}
+
+.set-button, 
+.change-button{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+width: auto;
+white-space: nowrap;
+height: auto;
+font-size: 18px;
+color: white;
+background-color: #00557F;
+border: none;
+border-radius: 20px;
+padding: 8px 20px;
+cursor: pointer;
+transition: all 0.3s ease;
+margin: 5px 20px auto auto;
+}
+
+.set-button:hover,
+.change-button:hover{
+background-color: #C39A6F;
+}
+.pay-button:hover,
+#uploadButton:hover{
+background-color: #00557F;
+color: #FFF;
+}
+
+.set-payment-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+margin-top: 20px;
+}
+
+.bank-label-input,
+.acc-label-input{
+display: flex;
+flex-direction: column;
+margin: 20px 0 20px 0;
+width: 100%;
+min-width: 100%;
+}
+
+.bank-label-input input,
+.acc-label-input input {
+width: 70%; 
+min-width: 50%;
+height: 20px;
+padding: 20px 0 20px 10px; 
+margin: 20px 0 20px 0;
+font-size: 18px; 
+border: 2px solid #ccc; 
+border-radius: 5px; 
+}
+
+.wallet-upload-block{
+display: flex;
+flex-direction: column;
+width: 39%;
+padding: 20px;
+background-color: white;
+border-radius: 15px;
+padding: 30px 0 50px 40px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+margin-left: auto;
+}
+
+.change-title-button{
+display: flex;
+flex-direction: row;
+width: 100%;
+align-items: center;
+text-align: center;
+}
+
+/* .payment-block .change-button{
+width: 180px;
+font-size: 16px;
+color: white;
+background-color: #00557F;
+padding: 8px 15px;
+border-radius: 40px;
+cursor: pointer;
+transition: all 0.3s ease;
+border: 1.5px solid white;
+margin: 20px 20px 20px auto;
+}
+
+.payment-block .change-button:hover{
+background-color: transparent;
+color: #C39A6F;
+border:1.5px solid #C39A6F;
+} */
+
+.image-upload-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding-right: 40px;
+margin: auto;
+}
+
+#imagePreviewContainer {
+display: flex;
+flex-direction: row;
+margin: 20px;
+border: 1px solid #ddd;
+padding: 20px;
+max-width: 300px;
+min-width: 250px;
+min-height: 200px;
+max-height: 400px;
+box-sizing: border-box;
+align-items: center;
+justify-content: center;
+text-align: center;
+border-radius: 10px;
+}
+
+#placeholderIcon{
+display: flex;
+
+}
+
+#imagePreviewContainer p{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+#placeholderText{
+width: 95%;
+}
+
+#imagePreview {
+max-width: 100%;
+max-height: 100%;
+display: block;
+margin: 0 auto;
+}
+
+#uploadContainer {
+display: flex;
+flex-direction: row;
+white-space: nowrap;
+width:fit-content;
+}
+
+
+
+/* .pay-button{
+font-size: 16px;
+color: #00557F;
+background-color: transparent;
+align-self: self-end;
+justify-self: flex-end;
+text-align:right;
+padding: 10px 16px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.3s ease;
+border-radius: 20px;
+border: 1.5px solid #00557F;
+margin-left: auto;
+} */
+/* ---------- change payment end ---------- */
+
+/* ---------- Payment table start ---------- */
+.pay-table-total{
+display: flex;
+flex-direction: column;
+width: 49%;
+margin-right: auto;
+margin-right: 20px;
+padding: 0;
+border-radius: 15px;
+}
+
+.payment-table{
+display: flex;
+height: 430px;
+width: 100%;
+min-width: 200px;
+overflow: auto;
+border-top-left-radius: 10px; 
+border-top-right-radius: 10px; 
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+background-color: white;
+}
+
+.payment-table .table-head{
+height: auto;
+font-size: 20px;
+background-color: #00557F;
+position: sticky;
+top: 0;
+z-index: 1;
+}
+
+.payment-table .fl-table {
+border-radius: 5px;
+border-collapse: collapse;
+width: 100%;
+max-width: 100%;
+}
+
+.payment-table .fl-table th {
+text-align: center;
+padding: 18px 20px;
+white-space: wrap;
+}
+
+.payment-table .fl-table td {
+text-align: center;
+font-size: 16px;
+font-weight: 500;
+padding: 10px;
+}
+
+.payment-table .fl-table thead th {
+color: white;
+}
+
+.payment-table .fl-table tr {
+border-bottom: 1px solid #C39A6F;
+margin: 0;
+} 
+
+.total-fines-label-button{
+display: flex;
+flex-direction: row;
+align-items: center;
+text-align: center;
+height: auto;
+width: 100%;
+min-width: 500px;
+padding: 20px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+box-shadow: 0px 5px 5px rgba( 0, 0, 0, 0.25 );
+display: flex;
+width: 100%;
+min-width: 200px;
+overflow: auto;
+}
+/* ---------- Payment table end ---------- */
+
+/* ---------- Payment box start ---------- */
+.payment-box{
+display: flex;
+flex-direction: column;
+width: 49%;
+margin-left: 20px;
+padding: 20px 0 20px 30px;
+margin-left: auto;
+border-radius: 15px;
+background-color: white;
+box-shadow: 0px 5px 5px rgba( 0, 0, 0, 0.25 );
+}
+
+.payment-box input {
+display: flex;
+width: 90%; 
+min-width: 80%;
+padding: 10px 20px 10px 10px; 
+margin: 20px 0 20px 0;
+font-size: 18px; 
+border: 2px solid #ccc; 
+border-radius: 10px; 
+}
+
+.pay-input-calculate{
+display: flex;
+flex-direction: column;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+
+.payment-input-button{
+display: flex;
+flex-direction: column;
+align-items: start;
+}
+
+.calculate-btn{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 10px 40px;
+height: auto;
+background-color: #00557F;
+color: white;
+border: none;
+border-radius: 30px; 
+border: 1.5px solid #a09e9e;
+cursor: pointer;
+font-size: 18px;
+}
+
+.calculate-btn:hover {
+background-color: #C39A6F;
+border: 1.5px solid #00557F;
+color: white;
+}
+
+/* ---------- Payment title buttons start ---------- */
+.pay-title-buttons{
+display: flex;
+flex-direction: column;
+margin-top: 20px;
+width: 90%;
+}
+
+.payment-label{
+display: flex;
+color: #00557F;
+font-size: 20px;
+}
+
+.cash-btn,
+.banking-btn,
+.ewallet-btn{
+display: flex;
+flex-direction: row;
+width: 100%;
+border-radius: 10px;
+font-size: 20px;
+color: #00557F;
+font-weight: 500;
+padding: 10px;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+background-color: white;
+border: 2px solid #00557F;
+}
+
+.cash-btn:hover,
+.banking-btn:hover,
+.ewallet-btn:hover{
+color: white;
+background-color: #00557F;
+}
+
+.cash-btn .pay-icon,
+.ewallet-btn .pay-icon,
+.banking-btn .pay-icon{
+display: flex;
+margin-right: 20px; 
+align-self: start;
+justify-self: start;
+text-align: start;
+}
+/* ---------- Payment title buttons start ---------- */
+/* ---------- Payment box end ---------- */
+/* ---------- Payment block end ---------- */
+
+
+
+/* ---------- Overdue block start ----------- */
+
+/* ---------- Overdue block end ----------- */
+
+
+
+/* ---------- Fines block start ----------- */
+
+/* ---------- Fines block end ----------- */
+
+
+
+/* ---------- Contact Form start ---------- */
+#contactForm { 
+z-index: 3;
+display: none;
+border: 6px solid salmon; 
+width: 400px;
+text-align: center;
+background: #fff;
+position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+overflow: scroll;
+padding: 20px;
+}
+
+#contactForm input {
+font-family: inherit;
+text-transform: inherit;
+font-size: 10px;
+display: block;
+width: 280px;
+padding: .4em;
+margin: auto;
+}
+
+.submit-btn { 
+width: 140px;
+display: inline-block;
+
+background: #007bff;
+color: #fff;
+font-weight: 100;
+font-size: 1.2em;
+border: none;
+height: 30px;
+}
+
+#contactForm label{
+font-size: 10px;
+}
+
+#dialog {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 9999;
+}
+
+#dialog-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 400px;
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#dialog-content h2 {
+font-size: 24px;
+margin-top: 0;
+color:rgba(195, 154, 111, 1)
+}
+
+#dialog-content p {
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+#dialog-content button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #00557f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #dialog-content button:hover {
+    background-color: #C39A6F;
+  }
+/* ---------- Contact Form end ---------- */
+
+/* ---------- COnfirm Payment start ---------- */
+.confirm-payment-button{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center; 
+text-align: center; 
+padding: 15px;
+height: 10px;
+margin-left: 50px;
+background-color: white;
+color: #C39A6F;
+border-radius: 30px; /* Adjust the border-radius for the curved effect */
+border: 2px solid #C39A6F;
+cursor: pointer;
+font-size: 18px;
+font-weight: 700;
+/* box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25); */
+}
+
+.confirm-payment-button:hover {
+background-color: #C39A6F;
+color: white;
+}
+
+
+/* ---------- Confirm Payment end ---------- */
+
+/* ---------- Pending block start ----------- */
+.successful-pay-button{
+    display: flex;
+    width: fit-content;
+    border: none;
+    border-radius: 120px;
+    background-color: #00557F;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    }
+    
+    .successful-pay-button:hover{
+    background-color: #C39A6F;
+    }
+    /* ---------- Pending block end ----------- */
+
+/* ---------- Resizing start ---------- */
+@media (max-width: 1284px) {
+/* ---------- change payment start ---------- */
+/* .changePayment{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.specific-block-title{
+display: flex;
+flex-direction: column;
+padding-left: 60px;
+margin-bottom: 50px;
+font-size: 30px;
+color: #00557F;
+}
+
+.bank-ewallet-block{
+display: flex;
+flex-direction: column;
+width: 90%;
+background-color: white;
+border-radius: 15px;
+margin: auto;
+}
+
+.bank-acc-set-block{
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+align-items: flex-start;
+justify-content: center;
+padding: 30px 0 0 40px;
+width:100%;
+}
+
+.set-title-button{
+display: flex;
+flex-direction: row;
+width: 100%;
+margin: auto;
+}
+
+.bank-acc-title,
+.wallet-acc-title{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #C39A6F;
+font-size: 30px;
+}
+
+.bank-acc-title .icon,
+.wallet-acc-title .icon{
+color:#C39A6F;
+font-size:50px;
+margin-right: 20px;
+}
+
+.set-button,
+#uploadButton{
+font-size: 16px;
+color: #00557F;
+background-color: transparent;
+padding: 10px 16px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.3s ease;
+border-radius: 20px;
+border: 1.5px solid #00557F;
+}
+
+.set-button{
+width: 100px;
+align-items: center;
+justify-items: center;
+text-align: center;
+margin-bottom: 20px;
+margin-left: auto;
+margin-right: 20px;
+}
+
+.pay-button:hover,
+.set-button:hover,
+#uploadButton:hover{
+background-color: #00557F;
+color: #FFF;
+}
+
+.set-payment-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+margin-top: 20px;
+}
+
+.bank-label-input,
+.acc-label-input{
+display: flex;
+flex-direction: column;
+margin: 20px 0 20px 0;
+width: 100%;
+min-width: 100%;
+}
+
+.bank-label-input input,
+.acc-label-input input {
+width: 70%; 
+min-width: 50%;
+height: 20px;
+padding: 20px 0 20px 10px; 
+margin: 20px 0 20px 0;
+font-size: 18px; 
+border: 2px solid #ccc; 
+border-radius: 5px; 
+}
+
+.wallet-upload-block{
+display: flex;
+flex-direction: column;
+width: 90%;
+padding: 20px;
+background-color: white;
+border-radius: 15px;
+margin: auto;
+padding: 30px 0 50px 40px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+margin-top: 60px;
+}
+
+.change-title-button{
+display: flex;
+flex-direction: row;
+width: 100%;
+align-items: center;
+text-align: center;
+}
+
+.payment-block .change-button{
+width: 180px;
+font-size: 16px;
+color: white;
+background-color: #00557F;
+padding: 8px 15px;
+border-radius: 40px;
+cursor: pointer;
+transition: all 0.3s ease;
+border: 1.5px solid white;
+margin: 20px 20px 20px auto;
+}
+
+.payment-block .change-button:hover{
+background-color: transparent;
+color: #C39A6F;
+border:1.5px solid #C39A6F;
+}
+
+.image-upload-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+justify-content: start;
+text-align: center;
+width: max-content;
+}
+
+#imagePreviewContainer {
+display: flex;
+flex-direction: row;
+margin: 20px;
+border: 1px solid #ddd;
+padding: 20px;
+max-width: 300px;
+min-width: 250px;
+min-height: 200px;
+max-height: 400px;
+box-sizing: border-box;
+align-items: center;
+justify-content: center;
+text-align: center;
+border-radius: 10px;
+}
+
+#placeholderIcon{
+display: flex;
+
+}
+
+#imagePreviewContainer p{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+#placeholderText{
+width: 95%;
+}
+
+#imagePreview {
+max-width: 100%;
+max-height: 100%;
+display: block;
+margin: 0 auto;
+}
+
+#uploadContainer {
+display: flex;
+flex-direction: row;
+white-space: nowrap;
+width:fit-content;
+}
+
+#uploadIcon {
+margin-right: 15px;
+} */
+
+/* .pay-button{
+font-size: 16px;
+color: #00557F;
+background-color: transparent;
+align-self: self-end;
+justify-self: flex-end;
+text-align:right;
+padding: 10px 16px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.3s ease;
+border-radius: 20px;
+border: 1.5px solid #00557F;
+margin-left: auto;
+} */
+/* ---------- change payment end ---------- */
+}
+
+@media (max-width: 1048px) {
+.pay-table-total{
+display: flex;
+flex-direction: column;
+width: 100%;
+margin: auto;
+padding: 0;
+border-radius: 15px;
+}
+.check-pay-block{
+display: flex;
+flex-direction: column;
+width: 90%;
+}
+
+.payment-box{
+display: flex;
+flex-direction: column;
+width: 100%;
+margin: auto;
+margin-top: 30px;
+padding-top: 20px;
+padding-left: 30px;
+border-radius: 15px;
+background-color: white;
+box-shadow: 0px 5px 5px rgba( 0, 0, 0, 0.25 );
+}
+}
+
+@media (max-width: 1150px){
+.change-bank-ewallet-block{
+display: flex;
+flex-direction: column;
+width: 90%;
+margin: auto;
+}
+
+.bank-ewallet-block{
+display: flex;
+flex-direction: column;
+width:100%;
+margin-right: auto;
+}
+
+.wallet-upload-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+padding: 20px;
+background-color: white;
+border-radius: 15px;
+margin: auto;
+padding: 30px 0 50px 40px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+margin-top: 40px;
+}
+}
+
+@media (max-width: 828px) {
+.title{
+display: none;
+}
+}
+
+@media (max-width: 765px) {
+.pending-block,
+.overdue-block,
+.fines-block{
+display: flex;
+flex-direction: column;
+width: 90%;
+margin: auto;
+margin-bottom: 60px;
+}
+
+/* .search-block{
+display: flex;
+flex-direction: column;
+width: 90%;
+margin: auto;
+margin-bottom: 50px;
+} */
+
+.search{
+display: flex;
+width: 90%;
+min-width: 250px;
+align-items: center;
+padding: 0;
+margin: auto;
+border: 1px solid #00557F;
+border-radius: 28px;
+background: white;
+}
+
+.search .icon{
+color: #00557F;
+font-size: 25px;
+margin: 5px;
+}
+
+.search .search-form{
+display: flex;
+width: 90%;
+}
+
+.search .search-bar{
+display: flex;
+width: 100%;
+margin: 0;
+color:#C39A6F;
+}
+
+.search input{
+display: flex;
+width: 95%;
+min-width: 70px;
+font-size: 20px;
+color: #00557F;
+margin-left: 0;
+margin-right: auto;
+outline: none;
+border: none;
+background: transparent;
+box-sizing: content-box;
+}
+
+#searchInput1::placeholder,
+#searchInput2::placeholder,
+#searchInput3::placeholder{
+content: "Search";
+}
+/* Search end */
+
+/* Table start */
+.pending-table,
+.table-wrapper-1,
+.table-wrapper-2{
+margin: auto; 
+height: 500px;
+width: 100%;
+min-width: 300px;
+overflow: auto;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+background-color: white;
+}
+
+.pending-table .table-head,
+.table-wrapper-1 .table-head,
+.table-wrapper-2 .table-head{
+width: 100%;
+font-size: 20px;
+background-color: #00557F;
+position: sticky;
+top: 0;
+z-index: 1;
+}
+/* Table start */
+
+/* Payment block start */
+.payment-block{
+display: flex;  
+flex-direction: column;
+width: 100%;
+margin-top: 50px;
+margin-bottom: 20px;
+}
+
+.specific-block-title{
+display: flex;
+flex-direction: column;
+padding-left: 60px;
+margin-bottom: 40px;
+font-size: 30px;
+color: #00557F;
+}
+
+.payment-block h1{
+color: #00557F; 
+font-size: 30px;
+font-weight: bold;
+margin-bottom: 40px;
+}
+.specificPatrons{
+display: flex;
+flex-direction: column;
+margin: auto;
+padding: 0;
+}
+
+.payment-table{
+height: 300px;
+width: 100%;
+min-width: 300px;
+margin: auto;
+overflow: auto;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+background-color: white;
+}
+
+.payment-table .table-head{
+height: auto;
+font-size: 20px;
+background-color: #00557F;
+position: sticky;
+top: 0;
+z-index: 1;
+}
+
+.total-fines-label-button{
+height: auto;
+padding: 20px;
+display: flex;
+width: 100%;
+min-width: 300px;
+flex-direction: row;
+align-items: center;
+box-shadow: 0px 5px 5px rgba( 0, 0, 0, 0.25 );
+text-align: center;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+margin: 10px auto 40px auto;
+}
+
+.payment-box{
+display: flex;
+flex-direction: column;
+width: 100%;
+min-width: 300px;
+margin: auto;
+padding-top: 20px;
+padding-left: 30px;
+border-radius: 15px;
+background-color: white;
+box-shadow: 0px 5px 5px rgba( 0, 0, 0, 0.25 );
+}
+
+.changePayment{
+display: flex;
+flex-direction: column;
+width: 100%;
+margin-top: 110px;
+}
+
+.check-pay-block{
+width: 90%;
+display: flex;
+flex-direction: column;
+margin: auto;
+}
+
+
+/* ---------- change payment start ---------- */
+.changePayment{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.specific-block-title{
+display: flex;
+flex-direction: column;
+padding-left: 60px;
+margin-bottom: 50px;
+font-size: 30px;
+color: #00557F;
+}
+
+.bank-ewallet-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+background-color: white;
+border-radius: 15px;
+margin: auto;
+}
+
+.bank-acc-set-block{
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+align-items: flex-start;
+justify-content: center;
+padding: 30px 0 0 40px;
+width:100%;
+}
+
+.set-title-button{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width: 100%;
+margin: auto;
+}
+
+.bank-acc-title .icon,
+.wallet-acc-title .icon{
+color:#C39A6F;
+font-size:50px;
+margin-right: 20px;
+}
+
+#uploadButton{
+font-size: 16px;
+color: #00557F;
+background-color: transparent;
+padding: 10px 16px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.3s ease;
+border-radius: 20px;
+border: 1.5px solid #00557F;
+/* margin-bottom: 20px; */
+}
+
+.pay-button:hover,
+#uploadButton:hover{
+background-color: #00557F;
+color: #FFF;
+}
+
+.set-payment-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+margin-top: 20px;
+}
+
+.bank-label-input,
+.acc-label-input{
+display: flex;
+flex-direction: column;
+margin: 20px 0 20px 0;
+width: 100%;
+min-width: 100%;
+}
+
+.bank-label-input input,
+.acc-label-input input {
+width: 70%; 
+min-width: 50%;
+height: 20px;
+padding: 20px 0 20px 10px; 
+margin: 20px 0 20px 0;
+font-size: 18px; 
+border: 2px solid #ccc; 
+border-radius: 5px; 
+}
+
+.change-title-button{
+display: flex;
+flex-direction: row;
+width: 100%;
+align-items: center;
+text-align: center;
+}
+
+.image-upload-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+justify-content: start;
+text-align: center;
+width: max-content;
+}
+
+#imagePreviewContainer {
+display: flex;
+flex-direction: row;
+margin: 20px;
+border: 1px solid #ddd;
+padding: 20px;
+max-width: 300px;
+min-width: 250px;
+min-height: 200px;
+max-height: 400px;
+box-sizing: border-box;
+align-items: center;
+justify-content: center;
+text-align: center;
+border-radius: 10px;
+}
+
+#placeholderIcon{
+display: flex;
+
+}
+
+#imagePreviewContainer p{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+#placeholderText{
+width: 95%;
+}
+
+#imagePreview {
+max-width: 100%;
+max-height: 100%;
+display: block;
+margin: 0 auto;
+}
+
+#uploadContainer {
+display: flex;
+flex-direction: row;
+white-space: nowrap;
+width:fit-content;
+}
+
+#uploadIcon {
+margin-right: 15px;
+}
+}
+
+@media (max-width: 581px){
+.payment-block{
+display: flex;  
+flex-direction: column;
+margin-bottom: 20px;
+}
+
+.wallet-upload-block{
+display: flex;
+flex-direction: column;
+width: 100%;
+min-width: 300px;
+padding: 20px;
+background-color: white;
+border-radius: 15px;
+margin: auto;
+padding: auto;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+margin-top: 40px;
+}
+
+.change-button{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+width: auto;
+white-space: nowrap;
+height: auto;
+font-size: 18px;
+color: white;
+background-color: #00557F;
+border: none;
+border-radius: 20px;
+padding: 8px 20px;
+cursor: pointer;
+transition: all 0.3s ease;
+margin: 5px 0 auto auto;
+}
+}
+
+@media (max-width: 930px) {
+.title{
+display: none;
+}
+/* ---------- Main content start ---------- */
+main{
+display: flex;
+flex-direction: column;
+height: 100%;
+width: 100%;
+margin-right: 0;
+padding-left: 70px;
+margin-left: 0%;
+width: 100%;
+transition: var(--tran-05);
+}
+
+main.expand {
+padding-left: 70px;
+}
+/* ---------- Main content end ---------- */
+}

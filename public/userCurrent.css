@@ -1,0 +1,287 @@
+/* =======Table Start======= */
+.table-wrapper{
+    width: 90%;
+    height: 600px;
+    overflow: auto;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto 0px; 
+    background-color: white;
+    }
+
+.table-wrapper .table-head{
+    position: sticky;
+    width: 100%;
+    height: 50px;
+    background-color: #00557F;
+    position: sticky;
+    top: 0;
+    }
+
+.fl-table {
+    border-radius: 5px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    font-size: 18px;
+padding: 10px 25px;
+}
+
+.fl-table thead th {
+    color: white;
+}
+
+.fl-table tr {
+    border-bottom: 1px solid #ABABAB;
+    margin: 10px;
+    } 
+
+.renew-btn {
+    border: none; 
+    border-radius: 20px; 
+    padding: 5px; 
+    margin: 10px; 
+    display: inline-block; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    width: 110px; 
+    height: 30px; 
+    color: white;
+    background-color: #00557F;
+    font-size: 17px;
+}
+
+.renew-btn:hover{
+    background-color: #C39A6F;
+}
+
+#confirm{
+    margin-right: 10px; 
+    background-color: #26A823;
+}
+
+#confirm:hover{
+    background-color: #187116;
+}
+
+#cancel{
+    margin-right: 10px; 
+    background-color: #DB3030;
+}
+
+#cancel:hover{
+    background-color: #AA2828;
+}
+/* =======Table End======= */
+
+
+/* =======Renew Dialog Start======= */
+#dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+#dialog-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+#dialog-content h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00557F
+}
+
+#dialog-content p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+#result{
+    color: #DB3030;
+}
+
+#dialog-content label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+#dialog-content button {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 5px; /* Adjust margin as needed */
+}
+
+/* =======Renew Dialog End======= */
+
+@media (max-width: 828px) {
+.title{
+display: none;
+}
+
+.search-block{
+/* display: flex;
+flex-direction: column;
+width: 90%;
+margin: auto;
+margin-bottom: 70px;
+margin: 0 50px 70px 40px; */
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+#intro-nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    }
+
+.search{
+display: flex;
+width: 80%;
+min-width: 250px;
+align-items: center;
+padding: 0;
+margin: auto;
+border: 1px solid #00557F;
+border-radius: 28px;
+background: white;
+}
+
+.search .icon{
+color: #00557F;
+font-size: 25px;
+margin: 5px;
+}
+
+.search .search-form{
+display: flex;
+width: 90%;
+}
+
+.search .search-bar{
+display: flex;
+width: 100%;
+margin: 0;
+color:#C39A6F;
+}
+
+.search input{
+display: flex;
+width: 95%;
+min-width: 70px;
+font-size: 20px;
+color: #00557F;
+margin-left: 0;
+margin-right: auto;
+outline: none;
+border: none;
+background: transparent;
+box-sizing: content-box;
+}
+
+#searchInput1::placeholder,
+#searchInput2::placeholder,
+#searchInput3::placeholder{
+content: "Search";
+}
+/* Search end */
+}
+
+@media (max-width: 930px) {
+/* ---------- Main content start ---------- */
+main{
+display: flex;
+flex-direction: column;
+height: 100%;
+width: 100%;
+margin-right: 0;
+padding-left: 75px;
+margin-left: 0%;
+width: 100%;
+transition: var(--tran-05);
+}
+
+main.expand {
+padding-left: 75px;
+}
+/* ---------- Main content end ---------- */
+}
+
+@media (max-width: 992px) {
+#contactForm { 
+position: fixed;
+display: none;
+text-align: center;
+width: 100%;
+height: 100%;
+top:50%;
+left:50%;
+padding: 0;
+margin: 0;
+margin-left: 30px;
+z-index: 3;
+transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+}
+
+.contact-whole-form{
+position: fixed;
+display: flex;
+flex-direction: column;
+width: 60%;
+min-width: 300px;
+height: 80%;
+margin: auto;
+overflow: scroll;
+padding: 40px 20px;
+z-index: 999;
+border-radius: 5px;
+background: #fff;
+transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+}
+
+.contact-wo-title{
+display: flex;
+flex-direction: column;
+width: 80%;
+margin: 30px auto;
+}
+}

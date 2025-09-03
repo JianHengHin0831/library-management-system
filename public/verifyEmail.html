@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="verification.css"> 
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+ 
+    <main>
+        <!-- Email Verification Box Start -->
+        <div class="emailVerify-container">
+            <form action="#" method="POST" class="emailotp-form" id ="emailotpForm">
+                <h2>Verify Your Email</h2>
+                <hr class="greyline">
+                <div class="description">
+                    <p>The OTP code has been sent to your email address.Please enter the OTP code to complete sign up.</p>
+                </div>
+                <div class="input-group">
+                    <label for="otpCode">OTP Code</label><br>
+                    <input type="text" id="otpCode" name="otpCode" placeholder="Enter the OTP code" required>
+                </div>
+                <button type="button" id="complete" onclick="verification()"><b>Complete Registeration</b></button>
+            </form>
+        </div>
+        <!-- Email Verification Box End -->
+    </main>
+    
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Javascript -->
+    <script src="verifyEmail.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="defaultUser.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="sidebar close"> 
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="img/liblogo.png" alt="Logo">
+                </span>
+            </div>
+            <i class='bx bx-chevron-right toggle' onclick="expand()"></i>
+        </header> 
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <!-- Home start -->
+                    <li class="nav-link" >
+                        <a href="userHome.html" id="homeUL">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a> 
+                    </li>
+                    <!-- Home end -->
+ 
+                    <!-- Dashboard start -->
+                    <li class="nav-link" id="dashboardUL">
+                        <a href="userDashboard.html" >
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- Dashboard end -->
+
+                    <!-- Current Borrowing start -->
+                    <li class="nav-link" id="currentUL">
+                        <a href="userCurrent.html">
+                            <i class='bx bx-book icon'></i>
+                            <span class="text nav-text">Current Borrowing</span>
+                        </a>
+                    </li>
+                    <!-- Current Borrowing end -->
+
+                    <!-- Borrow & Return History start -->
+                    <li class="nav-link" id="borrowUL">
+                        <a href="userHistory.html">
+                            <i class='bx bx-history icon' ></i>
+                            <span class="text nav-text">Borrow & Return History</span>
+                        </a>
+                    </li>
+                    <!-- Borrow & Return History end -->
+
+                    <!--  -->
+                    <li class="nav-link" id="overdueUL">
+                        <a href="userOverdue.html">
+                            <i class='bx bx-dollar-circle icon' ></i>
+                            <span class="text nav-text">Overdue & Fines</span>
+                        </a>
+                    </li>
+
+                    <!-- Reservation start -->
+                    <li class="nav-link" id="reserveUL">
+                        <a href="userReservation.html">
+                            <i class='bx bx-time-five icon' ></i>
+                            <span class="text nav-text">Reservation</span>
+                        </a>
+                    </li>
+                    <!-- Reservation end -->
+
+                    <!-- Journal start -->
+                    <li class="nav-link" id="journalUL">
+                        <a href="userJournal.html">
+                            <i class='bx bx-book-content icon'></i>
+                            <span class="text nav-text">Journal</span>
+                        </a>
+                    </li>
+                    <!-- Journal end -->
+                </ul>
+            </div>
+
+            <div class="bottom-content" >
+                <!-- Log Out start -->
+                <li class="">
+                    <a href="signIn.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <!-- Log Out end -->
+            </div>
+        </div>
+    </nav>
+    <script src="userSidebar.js"></script>
+</body>
+</html>

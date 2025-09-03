@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="defaultUser.css">
+    <link rel="stylesheet" href="userDashboard.css"> 
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <div class="main-content">
+            <!-- Nav Start -->
+            <div id="intro-nav">
+                <div class="iconTitle">
+                    <span class="icons"><i class='bx bxs-dashboard icon'></i></span>
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="rightButtons">
+                    <!-- Notification start -->
+                    <div class="introNavButtons">
+                        <button class="notification-button" onclick="toggleDropdown()">
+                            <i class='bx bx-bell' ></i>
+                        </button>
+                        <div class="dropdown-content" id="notificationDropdown">
+                            <span class="notiTitle">Notifications</span>
+                            <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                            <div id="notificationList"></div>
+                        </div>
+                    </div>
+                    <!-- Notification end -->
+
+                    <!-- Help Button Start -->
+                    <a href="userHelp.html" class="navBtns">
+                        <i class='bx bx-help-circle' ></i>
+                    </a>
+                    <!-- Help Button End -->
+
+                    <!-- Settings Button Start -->
+                    <a href="userSettings.html" class="navBtns">
+                        <i class='bx bx-cog' ></i>
+                    </a>
+                    <!-- Settings Button End -->
+
+                    <!-- Profile Button Start -->
+                    <a href="userProfile.html" class="profBtn">
+                        <button class="userProfile" >
+                            <div id="profPic"></div>
+                            <div>
+                                <p class="userName"></p>
+                                <div id="userBadge">User</div>
+                            </div>
+                        </button>
+                    </a>
+                    <!-- Profile Button End -->
+                </div> 
+            </div>
+            <!-- Nav End -->
+
+            <!-- Main Block Start-->
+            <div class="mainBlocks">
+
+                <!-- Profile Card Start -->
+                <div class="profileCard">
+                    <div class="first_block1" onclick="profile()">
+                        <div class="profile-pic-title">
+                            <div class="profile-image">
+                                <img alt="profile picture" class="pro-img" id="img1">
+                            </div>
+                            <div class = "profile_name">
+                                <div class="profile-main-title">
+                                    <p>User<br>Profile</p>
+                                </div>
+                                <div class="profile-name-email">
+                                    <p id="nameA"></h5> 
+                                    <p id="emailA"></h5>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="profile-details">
+                            <div class = "profile_title">
+                                <p class="pro-form">User ID</p><br>
+                                <p class="pro-form">Contact Number</p><br>
+                                <p class="pro-form">Department</p><br>
+                                <p class="pro-form">Role</p><br>
+                            </div>
+                            <div class="profile_detail" >
+                                <p class="pro-info" id="userNameA"></p>
+                                <br><p class="pro-info" id="contactNumberA"></p>
+                                <br><p class="pro-info" id="departmentA"></p>
+                                <br><p class="pro-info" id="roleA"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Profile Card End -->
+
+                <!-- Statistics Cards Start -->
+                <div class="statistic-card">
+                    <div class="column1">
+                        <div class="current_borrow">
+                            <h1 class="blockTitles">Books currently<br>Borrowing</h1>
+                            <br>
+                            <h2 id="current_borrow1"></h2>  
+                        </div>
+                        <div class="current_overdue">
+                            <h1 class="blockTitles">Current Overdue<br>Books</h1>
+                            <br>
+                            <h2 id="current_overdue1"></h2> 
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="current_reserved">
+                            <h1 class="blockTitles">Books currently<br>Reserved</h1>
+                            <br>
+                            <h2 id="current_reserve1"></h2>  
+                        </div>
+                        <div class="current_unpaid_fines">
+                            <h1 class="blockTitles">Current Unpaid<br>Fines</h1>
+                            <br>
+                            <h2 id ="current_unpaid1"></h2> 
+                        </div>
+                    </div>
+                </div>
+                <!-- Statistics Cards Start -->
+
+            </div>
+            <!-- Main Block Start-->
+
+
+            <!-- Graph Start -->
+            <div class="graph">
+                <div class="total_borrowed">
+                    <h1 class="graphTitle">Total Borrowed & Returned Books</h1>
+                    <canvas id="circulationChart" height="120%"></canvas>
+                </div>
+            </div>
+            <!-- Graph End -->
+        <div class="main-content">
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+   
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="userDashboard.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="mainUser.js"></script>  
+    <script src="userChatbox.js"></script>
+    <script src="notification.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="verification.css"> 
+    <link rel="stylesheet" href="default.css">    
+</head>
+<body> 
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <main>
+        <!-- Email Verification Box Start-->
+        <div class="emailVerify-container">
+            <form action="#" method="POST" class="emailotp-form" id ="emailotpForm">
+                <h2>Change Password</h2>
+                <hr class="greyline">
+                <div class="description">
+                    <p>Please enter the new password. </p>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <!-- <span class="hide-icon"><i class='bx bxs-hide' ></i></span> -->
+                        <span onclick="togglePasswordVisibility(1)" class="hide-icon"><i class='bx bxs-show' id="togglePassword1"></i></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="cpassword">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm_password" name="cpassword" placeholder="Confirm password" required>
+                        <!-- <span class="hide-icon"><i class='bx bxs-hide' ></i></span> -->
+                        <span onclick="togglePasswordVisibility(2)" class="hide-icon"><i class='bx bxs-show' id="togglePassword2"></i></span>
+                    </div>
+                </div>
+                <div class="pwcondition">
+                    <p><b>*Password must :<br>
+                    • Include at least 1 uppercase, lowercase, number, symbol<br>
+                    • Be at least 8 characters</b>
+                    </p>
+                </div>
+                <button type="button" onclick="complete2()"><b>Reset Password</b></button>
+            </form>
+        </div>
+        <!-- Email Verification Box End-->
+    </main>
+    
+    <!-- Error Dialogue Start -->
+    <div id="dialog" style="display:none;">
+        <div id="dialog-content">
+          <h2>Wrong Password or Email</h2>
+          <p>Your password or email is wrong !</p>
+          <button onclick="hideDialog()">Close</button>
+        </div>
+    </div>
+    <!-- Error Dialogue End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Javascript -->
+    <script src="newPw.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS     -->
+    <link rel="stylesheet" href="adminDashboard.css">
+    <link rel="stylesheet" href="defaultAdmin.css">
+ 
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+
+            <!-- Title Start -->
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bxs-dashboard icon'></i></span>
+                <h1>Dashboard</h1>
+            </div>
+            <!-- Title End -->
+
+            <div class="rightButtons">
+                <!-- Notification start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification end -->
+
+                <!-- Help Button Start -->
+                <a href="adminHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="adminSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="adminProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge"></div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+
+            </div>
+        </div>
+        <!-- Nav End -->
+        
+        <div class="dashboard-content">
+
+            <!-- Row 1 end -->
+            <div class="row1">
+
+                <!-- Admin Profile start -->
+                <div class="row1-block-1">
+                    <div class="first_block1" onclick="profile()">
+                        <div class="profile-pic-title">
+                            <div class = "profile_pic">
+                                <div class="profile-image">          
+                                </div>
+                            </div>
+                            <div class = "profile_name">
+                                <div class="profile-main-title">
+                                    <p>Admin<br>Profile</p>
+                                </div>
+                                <div class="profile-name-email">
+                                    <p id="nameA"></h5>
+                                    <p id="emailA"></h5>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="profile-details">
+                            <div class = "profile_title">
+                                <p class="pro-form">User ID</p><br>
+                                <p class="pro-form">Contact Number</p><br>
+                                <p class="pro-form">Department</p><br>
+                                <p class="pro-form">Role</p><br>
+                            </div>
+                            <div class="profile_detail" >
+                                <p class="pro-info" id="userNameA"></p>
+                                <br><p class="pro-info" id="contactNumberA"></p>
+                                <br><p class="pro-info">Library</p>
+                                <br><p class="pro-info" id="roleA"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Admin Profile end -->
+
+                <div class="row1-block-2">    
+                    <!-- Column 2 start -->
+                    <div class="column-2">
+                        <!-- Returned Book start -->
+                        <div class="first_block2">
+                            <h2 class="row1-title">Returned Books</h2>
+                            <h4 class="number" id = "returnA"></h4>
+                        </div>
+                        <!-- Returned Book end -->
+
+                        <!-- Overdue Book start -->
+                        <div class="first_block3">
+                            <h2 class="row1-title">Overdue Books</h2>
+                            <h4 class="number" id="overdueA"></h4>
+                        </div>
+                        <!-- Overdue Book end -->
+                    </div>
+                    <!-- Column 2 end -->
+
+                    <!-- Column 3 start -->
+                    <div class="column-3">
+                        <!-- Borrowed Book start -->
+                        <div class="first_block4">
+                            <h2 class="row1-title">Borrowed Books</h2>
+                            <h4 class="number" id="borrowedA"></h4>
+                        </div>
+                        <!-- Borrowed Book end -->
+
+                        <!-- Book in Library start -->
+                        <div class="first_block5">
+                            <h2 class="row1-title">Books in Library</h2>
+                            <h4 class="number" id="bookA"></h4>
+                        </div>
+                        <!-- Book in Library end -->
+                    </div>
+                    <!-- Column 3 end -->
+
+                    <!-- Column 4 start -->
+                    <div class="column-4">
+                        <!-- New Books start -->
+                        <div class="first_block6">
+                            <h2 class="row1-title">New Books</h2>
+                            <h4 class="number" id="newA"></h4>
+                        </div>
+                        <!-- New Books end -->
+
+                        <!-- Visitiors start -->
+                        <div class="first_block7">
+                            <h2 class="row1-title">Visitors</h2>
+                            <h4 class="number" id="visitorA"></h4>
+                        </div>
+                        <!-- Visitors end -->
+                    </div>
+                    <!-- Column 4 end -->
+
+                    <!-- Column 5 start -->
+                    <div class="column-5">
+                        <!-- New Users start -->
+                        <div class="first_block8">
+                            <h2 class="row1-title">New Users</h2>
+                            <h4 class="number" id="newUserA"></h4>
+                        </div>
+                        <!-- New Users end -->
+
+                        <!-- Reserved Books start -->
+                        <div class="first_block9">
+                            <h2 class="row1-title">Reserved Books</h2>
+                            <h4 class="number" id="reservedA"></h4>
+                        </div> 
+                        <!-- Reserved Books end -->
+                    </div>
+                    <!-- Column 5 end -->
+
+                </div>
+                <!-- Row 1 end -->
+            </div>
+
+            <!-- Row 2 start -->
+            <div class="row2">
+                <!-- Circulation statistic start -->
+                <div class="first_block10"> 
+                    <h2 class="row2-title">Circulation Statistic</h2>
+                    <div class="chart">
+                        <canvas id="circulationChart" style="max-height: 80%;"></canvas>
+                    </div>
+                </div>
+                <!-- Circulation statistic end -->
+
+                <!-- Circulation table start -->
+                <div class="first_block11" style="overflow: hidden;">
+                    <div class="row2-title-button">
+                        <h2 class="row2-title" >Circulation History</h2>
+                        <button class="see-all" onclick="window.location.href = 'adminCirculation.html';">See All</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="fl-table">
+                            <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Accession No</th>
+                                <th>Book Title</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody id = "table2A">
+                            <tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Circulation table end -->
+            </div>
+            <!-- Row 2 end -->
+        
+            <!-- Row 3 start -->
+            <div class="row3">
+                <!-- Fines and Overdue table start -->
+                <div class="first_block12">
+                    <div class="row3-title-button">
+                        <h2 class="row3-title">Overdue & Fines Record</h2>
+                        <button class="see-all" onclick="window.location.href = 'adminOverdue.html';">See All</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="fl-table">
+                            <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Accession No</th>
+                                <th>Book Title</th>
+                                <th>Overdue Days</th>
+                                <th>Fines (RM)</th>
+                            </tr>
+                            </thead>
+                            <tbody id="table1A">
+                            <tbody>
+                        </table> 
+                    </div>
+                </div>
+                <!-- Fines and Overdue table end -->
+
+                <!-- Fines and Overdue record start -->
+                <div class="first_block13">
+                    <!-- <h2 class="row3-title">Overdue & Fines Record</h2> -->
+                    <div class="overdue-fines-block">
+                        <div class="overdue">
+                            <br><br>
+                            <h4 class="number" id = "overdue2"></h4>
+                            <h2 class="fines-detail">Overdue Books</h2>    
+                        </div>
+                        <div class="and">
+                            <br><br><br><br><br>
+                            <h2 class="fines-detail">&</h2>
+                        </div>
+                        <div class="fines">
+                            <br><br>
+                            <h4 class="number" id="fines2"></h4>
+                            <h2 class="fines-detail">Overdue Fines<br>(RM)</h2>    
+                        </div>
+                    </div>
+                    <div class="patrons">
+                        <br><br>
+                        <h6>from</h6>
+                        <h4 class="number" id="patrons2"></h4>
+                        <h2 class="fines-detail">Patrons</h2>    
+                    </div>
+                </div>
+                <!-- Fines and Overdue record end -->
+            </div>
+            <!-- Row 3 end -->
+        </div>
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="mainAdmin.js"></script> <script src="adminDashboard.js"></script>
+    <script src="adminChatbox.js"></script>
+    <script src="notification.js"></script>
+    
+</body> 
+</html>
+
+

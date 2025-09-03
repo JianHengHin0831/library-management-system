@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Journal</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="notification.css">
+    <link rel="stylesheet" href="userAddJournal.css">
+    <link rel="stylesheet" href="defaultUser.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <main>
+        <!-- Nav Start -->
+        <div style="display: flex;">
+            <a href="userJournal.html">
+                <i class='bx bxs-chevron-left' style="margin-top: 30px; margin-left: 28px;"></i>
+            </a>
+            <div id="intro-nav" style="margin-left: 12.5px;">
+                <div class="iconTitle">
+                    <span class="icons"><i class='bx bx-book-content icon'></i></span>
+                    <h1>Add Journal</h1>
+                </div>
+                <div class="rightButtons">
+                    <!-- Notification Start -->
+                    <div class="introNavButtons">
+                        <button class="notification-button" onclick="toggleDropdown()">
+                            <i class='bx bx-bell' ></i>
+                        </button>
+                        <div class="dropdown-content" id="notificationDropdown">
+                            <span class="notiTitle">Notifications</span>
+                            <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                            <div id="notificationList"></div>
+                        </div>
+                    </div>
+                    <!-- Notification End -->
+
+                    <!-- Help Button Start -->
+                    <a href="userHelp.html" class="navBtns">
+                        <i class='bx bx-help-circle' ></i>
+                    </a>
+                    <!-- Help Button End -->
+
+                    <!-- Settings Button Start -->
+                    <a href="userSettings.html" class="navBtns">
+                        <i class='bx bx-cog' ></i>
+                    </a>
+                    <!-- Settings Button End -->
+
+                    <!-- Profile Button Start -->
+                    <a href="userProfile.html" class="profBtn">
+                        <button class="userProfile" >
+                            <div id="profPic"></div>
+                            <div>
+                                <p class="userName"></p>
+                                <div id="userBadge">User</div>
+                            </div>
+                        </button>
+                    </a>
+                    <!-- Profile Button End -->
+                </div> 
+            </div>
+        </div>
+        <!-- Nav End -->
+
+        <div class="borrow-return-content">
+            <div class="block">
+                <h2 class="main-title">Journal Information</h2> 
+                <div class="pic-content">
+                    <div class="only-content">
+                        <!-- First block start -->
+                        <div class="first_block1">
+                                <div class="container">
+
+                                    <label for="imagePreview"><b>Cover Image (The image will be shown as 3 : 2 ratio)</b></label>
+                                    <div id="imagePreviewContainer">
+                                        <span id="placeholderIcon"><i class='bx bx-camera' style="color: #00557F; font-size: 50px; margin-bottom: 20px;"></i></span>
+                                        <p id="placeholderText">Upload an image</p>
+                                        <img id="imagePreview" src="#" alt="Preview" style="display:none;">
+                                    </div>
+                                    
+                                    <div id="uploadContainer">
+                                        <label for="image" id="uploadButton">
+                                            <span id="uploadIcon"><i class='bx bx-camera' style="margin-right: 5px;"></i>Upload Image</span>
+                                        </label>
+                                        <input type="file" id="image" name="image" accept="image/*" required style="display: none;">
+                                    </div>
+
+                                    <label for="book_accession_number"><b>URL (If any)</b></label>
+                                    <input type="text" placeholder="URL" name="url" id="url">
+
+                                    <label for="user_id"><b>Title</b></label>
+                                    <input type="text" placeholder="Keywords" name="keywords" id="keywords" required>
+
+                                    <label for="user_id"><b>Authors</b></label>
+                                    <input type="text" placeholder="Author" name="author" id="author" required>
+
+                                    <label for="user_id"><b>Content</b></label>
+                                    <textarea placeholder="Write the content of your journal here..." name="comment" id="comment" required></textarea>
+                                    <!-- <hr> -->
+                                </div>    
+                        </div>
+                        <!-- First block end -->
+                    </div>
+                    <div class="only-pic">
+                    </div> 
+                </div>
+                <div class="only-submit">
+                    <button type="button" class="submit-btn" style="float: right;" onclick="addJournal()">Submit</button>
+                </div>
+            </div>
+            <div id="dialog" style="display:none;">
+                <div id="dialog-content">
+                <h2></h2>
+                <p></p>
+                <button onclick="hideDialog()">Close</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <footer id="footer-container"></footer>
+    <div id="dialog" style="display:none;">
+        <div id="dialog-content">
+          <h2></h2>
+          <p></p>
+          <button onclick="hideDialog()">Close</button>
+        </div>
+    </div>
+
+<div id="dialog" style="display:none;">
+    <div id="dialog-content">
+      <h2></h2>
+      <p></p>
+      <button onclick="hideDialog()">Close</button>
+    </div>
+</div>
+
+<script src="https://unpkg.com/@zxing/library@latest"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="userAddJournal.js"></script><script src="mainUser.js"></script>
+<script src="userChatbox.js"></script>
+<script src="notification.js"></script>
+
+</body>
+</html>

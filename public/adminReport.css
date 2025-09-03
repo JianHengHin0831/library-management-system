@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ----------All---------- */
+*{
+font-family: 'Josefin Sans';
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root{
+--bg-black-100:#353535;
+--bg-black-50:rgba(0, 85, 127, 1);
+--bg-black-20:white;
+}
+
+body{
+overflow: auto;
+margin:0;
+background-color: rgba(247, 247, 249, 1);
+}
+
+body.dark {
+--bg-black-100:#fff;
+--bg-black-50:#000;
+--bg-black-20:#eef0f4;
+}
+
+/* ---------- Main Content start ---------- */
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 100%;
+  margin-right: 0;
+  padding-left: 80px;
+  margin-left: 0;
+  transition: var(--tran-05);
+  }
+  
+  main.expand {
+  padding-left: 280px;
+  transition: var(--tran-05);
+  }
+  /* ---------- Main Content end ---------- */
+
+#report-container{
+  width: 90%;
+  margin: auto;
+}
+
+/* ---------- Report type start ---------- */
+.search-container {
+z-index: 2;
+display: flex;
+/* margin-left: 10px; */
+width: 100%;
+align-items: left;
+justify-content: start;
+text-align: left;
+/* border: 2px solid red; */
+}
+
+.search-container .report-type {
+margin: 30px 0 30px 10px;
+background-color: #00557F;
+}
+
+.report-type ul {
+padding: 0;
+margin: 0;
+list-style: none;
+position: relative;
+}
+
+.search-container .report-type ul li {
+display:inline-block;
+background-color: #00557F;
+}
+
+.report-type a {
+display: flex;
+padding:0 10px; 
+color:#FFF;
+font-size:20px;
+line-height: 60px;
+text-decoration:none;
+}
+
+.report-type a:hover { 
+background-color: #C39A6F; 
+}
+
+.report-type ul ul {
+display: none;
+position: absolute; 
+top: 60px; 
+}
+
+.report-type ul li:hover > ul {
+display:inherit;
+}
+
+.report-type ul ul li {
+width:170px;
+float:none;
+display:list-item;
+position: relative;
+}
+
+.report-type ul ul ul li {
+position: relative;
+top:-50px; 
+left:170px;
+}
+/* ---------- Report Type end ---------- */
+
+/* ---------- Below content start ---------- */
+.below-content{
+display: flex; 
+flex-direction: row;
+width: 100%;
+align-items: center;
+justify-content: center;
+/* border: 2px solid orange; */
+margin-bottom: 30px;
+}
+/* ---------- Below content end ---------- */
+
+/* ---------- Date start ---------- */
+#date1{
+display: flex;
+flex-direction: column;
+margin-left: auto;
+margin-right: 20px;
+width: 30%;
+} 
+
+.date-label{
+color: #00557F;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.last-block{
+margin-top: 20px;
+}
+
+.initial-day,
+.initial-month,
+.initial-year,
+.last-day,
+.last-month,
+.last-year{
+display: flex;
+flex-direction: column;
+margin-top: 30px;
+}
+
+.select-date{
+width: 60%;
+min-width: 100px;
+height: 30px;
+border: none;
+border-radius: 8px;
+/* padding: 20px; */
+}
+/* ---------- Date end ---------- */
+
+/* ----------Chart Export start ---------- */
+.chart-export{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 60%;
+height: auto;
+/* border: 2px solid brown; */
+}
+/* ----------Chart Export end ---------- */
+
+/* ---------- Chart start ---------- */
+#chart{
+display: flex;
+flex-direction: column;
+width:80%;
+max-width: 80%;
+height: 60%;
+max-height: 90%;
+/* font-family: 'Josefin Sans'; */
+/* max-height: 500px; */
+/* border: 2px solid red; */
+}
+
+#title{
+display: flex;
+flex-direction: column;
+border-radius: 20px;
+padding: 10px 20px 10px 20px;
+background-color: white;;
+border: 2px solid #C39A6F;
+min-height: 40px;
+height: auto;
+font-weight: 700;
+font-size: 20px;
+color: #00557F;
+width: 80%;
+}
+
+.chart-block{
+display: flex;
+font-family: 'Josefin Sans', sans-serif;
+align-items: center;
+justify-content: center;
+text-align: center;
+border: 2px solid #ABABAB;
+border-radius: 15px;
+min-width: 100%;
+width: 100%;
+height: 500px;
+max-height: 1000px;
+}
+/* ---------- Chart end ---------- */
+
+/* ---------- Buttons start ---------- */
+.export-buttons{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
+
+#exportButton1, 
+#exportButton2{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 10px;
+margin: 20px;
+height: auto;
+width: 300px;
+min-width: 100px;
+background-color: #00557F;
+color: #fff;
+border: none;
+font-weight: 400;
+border-radius: 10px; 
+cursor: pointer;
+font-size: 18px;
+}
+
+#exportButton1:hover, 
+#exportButton2:hover {
+background-color: #C39A6F;
+}
+/* ----------- Button end ---------- */
+
+/*  ---------- Report Detail start ---------- */
+#reportDetails {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 auto 100px 50px;
+  height: auto;
+  overflow: auto;
+  border-radius: 10px; 
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+
+table{
+  border-collapse: collapse;
+  
+}
+
+  #reportDetails th, #reportDetails td {
+  text-align: center;
+  padding: 13px 25px;
+  background-color: white;
+  }
+
+  #reportDetails th {
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  background-color: #00557F;
+  position: sticky; 
+  top: 0;  
+  z-index: 1; 
+  color: white;
+  }
+
+  #reportDetails tr {
+  border-bottom: 1px solid #ABABAB;
+  margin: 10px;
+  }
+
+  #reportDetails tr:hover {
+  background-color: #ddd;
+  }
+  /* ---------- Report Detail end ---------- */
+
+
+@media (max-width: 1000px){
+.title{
+  display: none;
+  }
+}
+@media (max-width: 930px) {
+  /* ---------- Main content start ---------- */
+  main{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  padding-left: 70px;
+  margin-left: 0%;
+  width: 100%;
+  transition: var(--tran-05);
+  }
+  
+  main.expand {
+  padding-left: 70px;
+  }
+  /* ---------- Main content end ---------- */
+.below-content{
+  display: flex; 
+  flex-direction: column;
+  width: 100%;
+  align-items: start;
+  justify-content: end;
+  /* border: 2px solid orange; */
+  margin-bottom: 30px;
+  }
+
+#chart{
+display: flex;
+flex-direction: column;
+width:80%;
+max-width: 90%;
+height: 80%;
+max-height: 90%;
+/* border: 2px solid red; */
+}
+
+.chart-export{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 0;
+padding: 0 20px 20px 20px;
+width: 100%;
+/* border: 2px solid brown; */
+}
+
+#date1{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+/* margin-left: 30px; */
+margin-top: 50px;
+width: 100%;
+/* margin-right: auto; */
+/* border: 2px solid green; */
+/* min-width: 300px; */
+}
+
+.initial-block,
+.last-block{
+margin: 20px;
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.initial-day,
+.initial-month,
+.initial-year,
+.last-day,
+.last-month,
+.last-year{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+/* text-align: center; */
+margin-top: 30px;
+}
+
+
+/* ---------- Report type start ---------- */
+.search-container {
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  /* align-items: left; */
+  justify-content: left;
+  /* text-align: left; */
+  /* border: 2px solid red; */
+  }
+  
+  .search-container .report-type {
+  margin: 20px 0 20px 0;
+  background-color: #00557F;
+  /* align-items: start;
+  justify-content: start;
+  text-align: left; */
+  }
+  
+  .report-type ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  }
+  
+  .search-container .report-type ul li {
+  background-color: #00557F;
+  }
+  
+  .report-type a {
+  display: flex;
+  padding:0 5px; 
+  color:#FFF;
+  font-size:12px;
+  text-decoration:none;
+  }
+  
+  .report-type a:hover { 
+  background-color: #C39A6F; 
+  }
+  
+  .report-type ul ul li {
+  width:80px;
+  }
+  
+  .report-type ul ul ul li {
+  left:80px;
+  }
+  /* ---------- Report Type end ---------- */
+
+/*  ---------- Report Detail start ---------- */
+  #reportDetails {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto 100px auto;
+  height: auto;
+  overflow: auto;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+
+  #reportDetails th, #reportDetails td {
+  text-align: center;
+  padding: 10px 25px;
+  }
+
+  #reportDetails th {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  background-color: #00557F;
+  position: sticky; 
+  top: 0;  
+  z-index: 1; 
+  color: white;
+
+  }
+
+  #reportDetails tr {
+  border-bottom: 1px solid #ABABAB;
+  margin: 10px;
+  }
+
+  #reportDetails tr:hover {
+  background-color: #ddd;
+  }
+  /* ---------- Report Detail end ---------- */ 
+}

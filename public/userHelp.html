@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Help</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="userHelp.css"> 
+    <link rel="stylesheet" href="defaultUser.css">
+</head>
+<body> 
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div id="intro-nav">
+            <div class="iconTitle">
+                <span class="icons"><i class='bx bx-help-circle icon'></i></span>
+                <h1>Help</h1>
+            </div>
+            <div class="rightButtons">
+                <!-- Notification start -->
+                <div class="introNavButtons">
+                    <button class="notification-button" onclick="toggleDropdown()">
+                        <i class='bx bx-bell' ></i>
+                    </button>
+                    <div class="dropdown-content" id="notificationDropdown">
+                        <span class="notiTitle">Notifications</span>
+                        <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                        <div id="notificationList"></div>
+                    </div>
+                </div>
+                <!-- Notification end -->
+
+                <!-- Help Button Start -->
+                <a href="userHelp.html" class="navBtns">
+                    <i class='bx bx-help-circle' ></i>
+                </a>
+                <!-- Help Button End -->
+
+                <!-- Settings Button Start -->
+                <a href="userSettings.html" class="navBtns">
+                    <i class='bx bx-cog' ></i>
+                </a>
+                <!-- Settings Button End -->
+
+                <!-- Profile Button Start -->
+                <a href="userProfile.html" class="profBtn">
+                    <button class="userProfile" >
+                        <div id="profPic"></div>
+                        <div>
+                            <p class="userName"></p>
+                            <div id="userBadge">User</div>
+                        </div>
+                    </button>
+                </a>
+                <!-- Profile Button End -->
+            </div> 
+        </div>
+        <!-- Nav End -->
+  
+        <!-- Main Contents Start-->
+        <div class="mainBlocks">
+            <!-- IT Staff info Start-->
+            <div class="it_block">
+                <span class="it">For any technical issue, please email to: </span>
+                <div class="details">
+                    <div><img src="img/uosmIT.jpg" title="it_picture" id="ITpicture"></div>
+                    <div class="it_detail"><p><b>IT Department</b><br><b>Email :</b> ituosm@soton.ac.uk</p></div>
+                </div>
+            </div> 
+            <!-- IT Staff info End-->
+
+            <!-- Librarian info Start-->
+            <div class="lib_block">
+                <span class="lib">For any inquiries about library, please email to:</span>
+                <div class="details">
+                    <div id="LibPicture"></div>
+                    <div class="lib_detail"></div>
+                </div>
+            </div> 
+            <!-- Librarian info End-->
+        </div>
+
+        <!-- Guide Start-->
+        <div class="instructionsBlock">
+            <div class="help_block">
+                <span class="help">User Guide</span>
+                <button class="accordion">Sidebar</button>
+                <div class="panel">
+                    <p>(1) You can expand the sidebar to view the full text on the sidebar.</p>
+                    <img src="guide/userSidebarExpand.png" alt="sidebar expand guide" style="width: 200px ;height: 300px;;">
+                </div>
+
+                <button class="accordion">Chatbox</button>
+                <div class="panel">
+                    <p>(1) You can use chatbot to ask any queries.</p>
+                    <img src="guide/Untitled (1).png" alt="chatbox guide" style="height: 300px;;">
+                    <p>(2) You can type your message on the textbox to get an answer.</p>
+                    <img src="guide/Untitled (2).png" alt="type message guide" style="height: 300px;;">
+                </div>
+
+                <button class="accordion">Home</button>
+                <div class="panel">
+                    <p>(1) You can click on a book here to view any single books of ‘My Favourite Books’ in homepage.</p>
+                    <img src="guide/homeMyFavouriteBooks1.png" alt="type message guide" style="height: 300px;;">
+                    <p>(1) To search any books, you can press on the search bar, and then you will be directed to book searching.</p>
+                    <img src="guide/userHomeSearchBar1.png" alt="type message guide" style="height: 300px;;">
+                </div>
+
+                <button class="accordion">Book Details</button>
+                <div class="panel">
+                    <p>(1) You can click on a book here to view any single books of ‘My Favourite Books’ in homepage.</p>
+                    <img src="guide/Untitled (7).png" alt="type message guide" style="height: 300px;;">
+                    <p>(1) You can click ‘Love’ button to keep a book in your favourite list. It will be shown in the homepage. </p>
+                    <img src="guide/Untitled (8).png" alt="type message guide" style="height: 300px;;">
+                    <img src="guide/Untitled (9).png" alt="type message guide" style="height: 300px;;">
+                    <p>(2) You can click ‘Reserve’ button to reserve a book. (adminBookDetailsReserve1)
+                        <br>There are two (2) conditions for the reservation status: 
+                        <br>1. Your book reservation may go to ‘Confirmed’ if no one is borrowing the book;
+                        
+                        <br>2. Or your reservation may go to ‘Pending’ if someone is borrowing the book and once the book has been returned, then the system will follow the reserve priority.</p>
+                        <img src="guide/Untitled (10).png" alt="type message guide" style="height: 300px;;">
+                        <img src="guide/Untitled (11).png" alt="type message guide" style="height: 300px;;">
+                    <p>(1) You can view the rating and comments from every users of a single book under Book Details.</p>
+                    <img src="guide/Untitled (12).png" alt="type message guide" style="height: 300px;;">
+                    <p>(1) You can click ‘Write Review about This Book’ to write your comments and thoughts about the book. </p>
+                    <img src="guide/Untitled (13).png" alt="type message guide" style="height: 300px;;">
+                </div>
+
+                <button class="accordion">Reservation</button>
+                <div class="panel">
+                    <p>(1) You can click ‘Cancel’ button to cancel book reservation for any pending reservation. If you click ‘Confirm’ button, then the book reservation will be cancelled.</p>
+                    <img src="guide/Untitled (3).png" alt="type message guide" style="height: 300px;;">
+                </div>
+
+                <button class="accordion">Overdue & Fines</button>
+                <div class="panel">
+                    <p></p>
+                </div>
+
+                <button class="accordion">Settings</button>
+                <div class="panel">
+                    <p>(1) You can select either light mode or dark mode for your system appearance. </p>
+                    <img src="guide/Untitled (4).png" alt="type message guide" style="height: 300px;;">
+                    <p>(2) You can type your thoughts about the library system for providing any feedback for system update and advancement. </p>
+                    <img src="guide/Untitled (5).png" alt="type message guide" style="height: 300px;;">
+                    <p>(3) You can type your thoughts about the library system for providing any feedback for system update and advancement.</p>
+                    <img src="guide/Untitled (6).png" alt="type message guide" style="height: 300px;;">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="instructionsBlock">
+            <div class="help_block">
+                <span class="help">Frequently Asked Questions</span>
+                <button class="accordion">What is a UoSM Library Management System?</button>
+                <div class="panel">
+                    <p>UoSM Library Management System is a comprehensive platform designed to streamline library operations and 
+                            enhance user experience for both students and staff of the University of Southampton Malaysia. For users, 
+                            it offers features such as track and manage borrowed and returned books, reservation of books, fine payment, journal 
+                            writing, and more. For administrators, it offers functionalities like book registering and cataloging, borrowing and returning of books for patrons,
+                            resource, user, circulation and reservation management, acquisition tracking, report generation, and journal approval. This system serves as a centralized hub 
+                            for managing library resources efficiently.</p>
+                </div>
+
+                <button class="accordion">Can I borrow and return books through the system?</button>
+                <div class="panel">
+                    <p></p>
+                </div>
+
+                <button class="accordion">What should I do if I encounter any issues in the system or have questions about the library?</button>
+                <div class="panel">
+                    <p>If you encounter any issues in the system, you can reach out to the university's IT
+                    support team for assistance. Contact information can be found on the help page.<br>
+                    If you have any inquiries about the library, you can reach out to the librarian
+                    for assistance. Contact information can be found on the help page.</p>
+                </div>
+
+                <button class="accordion">How do I get help from a Librarian?</button>
+                <div class="panel">
+                    <p>In person: Visit the library during operating hours and speak with a librarian at the reference desk.<br>
+                        Email a question: Send your inquiry to the library's designated email address for reference questions.</p>
+                </div>
+
+                <button class="accordion">How do I find information for my research or class assignment?</button>
+                <div class="panel">
+                    <p>Find Books: Utilize the library catalog to search for books by title, author, or subject.<br>
+                        Find Electronic Books (E-Books): Click the link in home page will link to the University of Southampton UK online library.<br>
+                        Find journal: Browse the journal page can find journal uploaded by users.<br>
+                        Find Info on the Web: Use reputable search engines and library databases to find credible information online.<br>
+                        Develop a topic: Consult with a librarian for assistance in refining your research topic.<br>
+                        Do better searches: Attend library workshops or ask a librarian for search tips and strategies.<br>
+                        Get help from a librarian: Reach out to a librarian for personalized research assistance.</p>
+                </div> 
+
+                <button class="accordion">How do I find out about databases & online resources?</button>
+                <div class="panel">
+                    <p>Access library databases: Visit the library's website and navigate to the databases section, where you can search for and access various databases by subject or title.<br>
+                       Access library databases on my personal device: Log in to the library website using your credentials.<br>
+                        Database Problem? Account Locked: Contact the library's IT support or reference desk for assistance with database access issues, including locked accounts or technical problems.<br>
+                        Need to "authenticate": If prompted to authenticate, use your library credentials (such as username and password) to log in and access the resource.<br>
+                        Troubleshoot problems getting to databases: Consult with the library's IT support or reference desk for troubleshooting assistance, including issues with access or compatibility.<br>
+                        Use library resources from home: Utilize remote access options provided by the library, such as VPNs or proxy servers, to access library resources from home or off-campus.</p>
+                </div>
+
+                <button class="accordion">How do I find out about Library rules & policies?</button>
+                <div class="panel">
+                    <p> Challenge materials in library collections: Review the library's procedures for challenging materials in the collection, typically involving a formal process for reconsideration.<br>
+                         Code of Conduct: Familiarize yourself with the library's code of conduct, which outlines expected behavior for patrons while in the library.<br>
+                         Donate materials to the Library: Contact the library to inquire about their donation policies and procedures, including acceptable materials and donation process.<br>
+                         Guidelines for Using Library Computers: Consult with library staff or check the library's website for guidelines and policies regarding computer use, including internet access and acceptable use policies.<br>
+                         Library checkout rules and policies: Review the library's checkout policies, including loan periods, renewal options, and overdue fines, which are typically outlined on the library's website or posted in the library.<br>
+                         Why is there a Security Gate: The security gate is installed to prevent theft and unauthorized removal of library materials. Patrons are expected to pass through the gate when entering and exiting the library to ensure compliance with library policies and prevent loss of library resources.</p>
+                </div>
+
+                <button class="accordion">How do I find out about my library account?</button>
+                <div class="panel">
+                    <p> Contact the library about my record: Reach out to the library's circulation desk or access your account through the library's website using your login credentials.<br>
+                         Pay Library Fines: Visit the circulation desk or access your account online to view and pay fines using the designated payment methods.<br>
+                         Renew my material online: Log in to your library account through the library's website and follow the instructions to renew materials online, if available.<br>
+                         Return a book or other material: Return materials to the library's circulation desk or designated drop-off location during operating hours.<br>
+                         See if I have overdues, fines, or library holds on my student record: Check your library account online or contact the circulation desk for information on overdues, fines, or holds associated with your account.<br>
+                         See what material I have checked out: Access your library account online or inquire at the circulation desk to view a list of materials currently checked out to you.</p>
+                </div>
+
+                <button class="accordion">How do I find out about using Library facilities & resources?</button>
+                <div class="panel">
+                    <p> Does the library rent textbooks: Inquire with the library staff about textbook rental programs or services, if available.<br>
+                         Find out about document delivery: Ask library staff about document delivery services, which may include interlibrary loan or document delivery options.<br>
+                         Log on to library computers: Use your library account credentials or guest login information to access library computers.<br>
+                         Make photocopies: Use the library's photocopy machines, following any applicable instructions or guidelines for use.<br>
+                         Print out a paper: Access printing services provided by the library, which may involve using designated printers or printing stations.<br>
+                         QR Codes in the Library: Scan QR codes located throughout the library to access additional information, resources, or services.<br>
+                         Suggest the library buy a book: Submit a book purchase request to the library, providing details about the requested item and reasons for acquisition.<br>
+                         Schedule a Group Study Room: Contact the library's circulation desk or check the library's website for information on reserving group study rooms, including availability and booking procedures.<br>
+                         Why is there a Security Gate: The security gate is installed to prevent theft and unauthorized removal of library materials. Patrons are expected to pass through the gate when entering and exiting the library to ensure compliance with library policies and prevent loss of library resources.</p>
+                </div>
+
+                <button class="accordion">Find if the library has my textbook?</button>
+                <div class="panel">
+                    <p> Search the library's online catalog using the title, author, or ISBN of your textbook to see if it is available in the library's collection.<br>
+                         Inquire at the library's circulation desk or contact library staff for assistance in locating specific textbooks or course materials.</p>
+                </div>
+
+                <button class="accordion">Find my instructor / teacher's reserve materials (including language tapes) in the library?</button>
+                <div class="panel">
+                    <p> Check the library's reserve materials section, which may include items placed on reserve by instructors for specific courses.<br>
+                         Search the library's online catalog for reserve materials by course name, instructor name, or course number.<br>
+                         Inquire at the circulation desk for assistance in locating reserve materials, including language tapes.<br>
+                         Check the syllabus or course materials provided by your instructor for information on accessing their webpage or online resources.<br>
+                         Access your courses, assignments, and other course materials through the Blackboard interface</p>
+                </div>
+
+              
+            </div>
+        </div>
+        <!-- Guide End -->
+        <!-- Main Contents End-->
+    </main>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+
+    <!-- Javascript -->
+    <script src="userHelp.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="mainUser.js"></script>  
+    <script src="userChatbox.js"></script>
+    <script src="notification.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

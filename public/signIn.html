@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- Boxicons Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="signIn.css"> 
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+    
+    <main>
+        <!-- Image Start -->
+        <img id = "image" src="img/welcome1.png" alt="welcome to our library icon">
+        <!-- Image End -->
+        <!-- Log In Box Start -->
+        <div class="login-container">
+            <h2>Welcome !</h2>
+            <h3>Log In</h3>
+            <hr class="greyline"> 
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <!-- <span class="hide-icon"><i class='bx bxs-hide' ></i></span> -->
+                    <span class="hide-icon"><i class='bx bxs-show' id="togglePassword"></i></span>
+                </div>
+            </div>
+            <div class="rememberReset">
+                <div id="check-box">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label><br> 
+                </div>
+                <div id="resetpw">
+                    <a href="forgotPw.html">Forgot Password?</a>
+                </div>
+            </div>  
+            <button type="button" id="logIn"><b>Log In</b></button>
+            <div class="links-group">
+                <a href="signup.html">Haven't Signed Up?</a>
+            </div>    
+        </div>
+        <!-- Log In Box End -->
+    </main>
+    
+    <!-- Error Dialogue Start -->
+    <div id="dialog" style="display:none;">
+        <div id="dialog-content">
+          <h2>Wrong Password or Email</h2>
+          <p>Your password or email is wrong !</p>
+          <button onclick="hideDialog()">Close</button>
+        </div>
+    </div>
+    <!-- Error Dialogue End -->
+
+    <!-- OTP Dialogue Start -->
+    <div id="contactForm">
+        <form action="#">
+            <label for="email"><b>The OTP has been sent to the Email</b></label>
+            <input type="text" name="email" id="email11" required readonly>
+    
+            <label for="otp"><b>Enter OTP here</b></label>
+            <input type="text" placeholder="Enter OTP" name="otp" id="otp" required>
+    
+            <button type="button" class="submit-btn"  onclick="verification1()">Submit</button>
+            <button type="button" class="submit-btn"  onclick="cancel()">Cancel</button>
+        </form>
+    </div>
+    <!-- OTP Dialogue End -->
+    
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="signIn.js"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+    
+        togglePassword.addEventListener('click', function () {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                togglePassword.classList.remove('bxs-show');
+                togglePassword.classList.add('bxs-hide');
+            } else {
+                passwordInput.type = 'password';
+                togglePassword.classList.remove('bxs-hide');
+                togglePassword.classList.add('bxs-show');
+            }
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ----------All---------- */
+*{
+font-family: 'Josefin Sans';
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root{
+--bg-black-100:#353535;
+--bg-black-50:rgba(0, 85, 127, 1);
+--bg-black-20:white;
+}
+
+body{
+margin: 0;
+padding: 0;
+width: 100%;
+min-width: 1400px;
+position: relative; 
+background-color: #F5F5F5;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+body.dark {
+--bg-black-100:#fff;
+--bg-black-50:#000;
+--bg-black-20:#eef0f4;
+}
+/* ---------- All end ---------- */
+
+/* ---------- Main Content start ---------- */
+main{
+display: flex;
+flex-direction: column;
+width: 100%;
+min-width: 100%;
+margin-right: 0;
+padding-left: 80px;
+margin-left: 0;
+transition: var(--tran-05);
+}
+
+main.expand {
+padding-left: 280px;
+transition: var(--tran-05);
+}
+/* ---------- Main Content end ---------- */
+
+/* ---------- Table start ---------- */
+.first_block11 .table-wrapper{
+display: flex;
+margin: 0px 30px 30px;
+width: 95%;
+height : 70%;
+overflow: hidden;
+margin-bottom: 20px;
+}
+
+.first_block12 .table-wrapper{
+display: flex;
+margin: 30px;
+width: 95%;
+height: 70%;
+overflow: hidden; 
+margin-bottom: 20px;
+}
+
+.fl-table {
+border-radius: 5px;
+font-size: 12px;
+font-weight: normal;
+border: none;
+border-collapse: collapse;
+width: 95%;
+max-width: 100%;
+white-space: wrap;
+background-color: white;
+}
+
+.first_block11 .fl-table td, 
+.first_block11 .fl-table th,
+.first_block12 .fl-table td, 
+.first_block12 .fl-table th{
+text-align: center;
+padding: 10px;
+color: #000;
+}
+
+.first_block11 .fl-table td,
+.first_block12 .fl-table td {
+border-right: 1px solid #f8f8f8;
+font-size: 16px;
+padding: 15px 0 15px 0;
+color: #C39A6F;
+}
+
+.first_block12 .fl-table td {
+border-right: 1px solid #f8f8f8;
+font-size: 16px;
+padding: 20px 0 20px 0;
+color: #C39A6F;
+}
+
+.fl-table thead th {
+color: black;
+font-size: 18px;
+border-bottom: 2px solid #ababab;
+}
+
+.fl-table tr:nth-child(even) {
+background: white;
+} 
+/* ---------- Table end ---------- */
+
+.dashboard-content{
+display: flex;
+flex-direction: column;
+width: 100%;
+margin: 0;
+margin-top: 20px;
+}
+
+/* ---------- Both Rows start ---------- */
+.row1,
+.row2,
+.row3{
+display: flex;
+flex-direction: row;
+width:90%;
+margin: auto;
+padding: 0;
+}
+/* ---------- Both Rows end ---------- */
+
+
+/* ---------- Row 1 start ---------- */
+.row1-block-1{
+display: flex;
+width: 340px;
+max-width: 340px;
+min-width: 340px;
+height: 370px;
+border-radius: 20px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+overflow: hidden;
+background: white;
+padding: 20px;
+}
+
+.row1-block-2{
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: calc(100% - 340px);
+padding-left: 20px;
+}
+/* ---------- Row 1 end ---------- */
+
+
+/* ---------- Admin Profile start ---------- */
+.first_block1 {
+margin: 25px 20px ;
+} 
+
+.profile-pic-title{
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.profile_pic, .profile-image, .pro-img{
+height: 105px;
+width: 105px;
+object-fit: cover;
+border-radius: 50%;
+margin-bottom: 20px;
+}
+
+.profile_name{
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+text-align: end;
+margin-left: 20px;
+max-width: 220px;
+}
+
+.profile-main-title{
+  width: 75%;
+  text-align: end;
+  word-wrap: break-word;
+  line-height: 1.2;
+  font-weight: bold;
+  font-size: 26px;
+  color:#00557F;
+  border-left: 4px solid #C39A6F;
+}
+
+.profile-name-email{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.profile-name-email #nameA{
+  padding: 15px 0 10px 0;
+  color: #9B7650;
+  font-weight: bold;
+  font-size: 18px;
+
+}
+.profile-name-email #emailA{
+color: #999999;
+margin-bottom: 18px;
+max-width: 190px;
+font-size:14px;
+}
+
+.profile_title{
+border-right: 1px solid #B7B7B7;
+}
+
+.profile-details{
+display:inline-block;
+display: flex;
+flex-direction: row;
+}
+
+.profile-details .pro-form{
+display: flex;
+flex-direction: column;
+text-align: end;
+font-size: 15px;
+font-weight: 800;
+color: #00557F;
+margin-right: 10px;
+}
+
+.profile-details .pro-info{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  text-align: start;
+  color: #C39A6F;
+  font-weight: 600;
+  margin-left:10px;
+}
+
+/* ---------- Admin Profile end ---------- */
+.column-2,
+.column-3,
+.column-4,
+.column-5{
+display: flex;
+flex-direction: column;
+width: 24%;
+margin: 0 auto 0 auto;
+height: auto;
+/* align-items: center; */
+justify-content: center;
+}
+
+.column-2{
+margin: 0 auto 0 0;
+}
+.column-5{
+margin: 0 0 0 auto;
+}
+
+.first_block2,
+.first_block4,
+.first_block6,
+.first_block8{
+width: 100%;
+padding: 10px;
+height: 180px;
+/* align-items: center;
+justify-content: center; */
+text-align: center;
+margin-bottom: 10px;
+}
+
+.first_block3,
+.first_block5,
+.first_block7,
+.first_block9{
+width: 100%;
+padding: 10px;
+height: 180px;
+/* align-items: center;
+justify-content: center; */
+text-align: center;
+}
+
+.first_block2,
+.first_block3,
+.first_block4,
+.first_block5,
+.first_block6,
+.first_block7,
+.first_block8,
+.first_block9{
+display: flex; 
+flex-direction: column;
+border-radius: 15px;
+overflow: hidden;
+background-color: white;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.row1-title{
+font-size: 30px;
+padding: 20px 20px 0 20px;
+height: 110px;
+color: #00557F;
+}
+
+.number{
+font-family: Poppins;
+/* font-size: 55px; */
+}
+/* ---------- Row 1 end ---------- */
+
+
+/* ---------- Row 2 start ---------------- */
+.row2{
+margin-top: 40px;
+}
+
+.row2-title{
+padding: 30px;
+color: #00557F;
+font-size: 30px;
+}
+
+.chart{
+display: block;
+flex-direction: column;
+width: 100%;
+height: 100%;
+/* margin: 60px 0 20px 0; */
+}
+
+#circulationChart{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+padding: 0px 30px;
+margin-top: 20px;
+/* margin: 60px 5x 20px 10px; */
+}
+
+/* Circulation staistic start */
+.first_block10 {
+display: flex;
+flex-direction: column;
+background-color: white;
+margin: 0 auto 0 0;
+width: 49.5%;
+height: 450px;
+border-radius: 15px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}   
+/* Circulation statistic end */
+
+/* Circulation table start */
+.first_block11 {
+height: 450px;
+background-color: white;
+border-radius: 15px;
+margin: 0 0 auto 0;
+width: 49.5%;
+min-width: 48%;
+right:0;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}  
+/* Circulation table end */
+
+.row2-title-button,
+.row3-title-button{
+display: flex;
+flex-direction: row;
+}
+.see-all{
+font-size: 16px;
+align-items: center;
+text-align: center;
+color: #00557F;
+background-color: transparent;
+padding: 1px 15px;
+border-radius: 20px;
+height: 30px;
+border: 1.5px solid #00557F;
+margin: 28px;
+cursor: pointer;
+transition: all 0.3s ease;
+display: flex;
+justify-content: flex-end;
+margin-left: auto;
+}
+
+.see-all:hover{
+background: #00557F;
+color: #FFF;
+right: 0;
+}
+/* ---------- Row 2 end ---------- */
+
+
+/* ---------- Row 3 start ---------- */
+.row3{
+margin-top: 40px;
+}
+
+.row3-title{
+padding: 30px;
+color: #00557F;
+font-size: 30px;
+}
+  
+.fines-detail{
+color: #00557F;
+font-size: 30px;
+}
+/* Fines and Overdue table start */
+.first_block12 {
+display: flex;
+flex-direction: column;
+width: 59.5%;
+height: 540px;
+background-color: white;
+margin: 0 auto 0px 0;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}  
+/* Fines and Overdue table end */
+
+/* Fines and Overdue record start */
+.first_block13 {
+display: flex;
+flex-direction: column;
+background-color: white;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin: 0 0 0px auto;
+width: 40%;
+min-width: 39%;
+height: 540px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}  
+/* Fines and Overdue record end */
+
+.overdue-fines-block{
+margin: 0 10px 0 10px;  
+display: flex;
+flex-direction: row;
+}
+
+.and{
+margin: 0 20px 0 20px;
+}
+
+.overdue{
+margin: 0 20px 0 20px;
+display: flex;
+flex-direction: column;
+}
+/* ---------- Row 3 end ---------- */
+
+h2 {
+color: rgba(0, 85, 127, 1);
+font-size: 30px; 
+}
+
+h4 {
+color: rgba(195, 154, 111, 1);
+font-size: 40px;
+}
+
+h6 {
+color: rgba(0, 85, 127, 1);
+font-size: 30px;
+} 
+
+@media (max-width: 930px) {
+/* ---------- Main content start ---------- */
+main{
+display: flex;
+flex-direction: column;
+height: 100%;
+width: 100%;
+margin-right: 0;
+padding-left: 70px;
+margin-left: 0%;
+width: 100%;
+transition: var(--tran-05);
+}
+
+main.expand {
+padding-left: 70px;
+}
+/* ---------- Main content end ---------- */
+}
+
+#nightowl-switcher-default{
+position: absolute;
+margin-top: 50px;
+}

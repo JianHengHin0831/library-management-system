@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans'>
+    <!-- Boxicons Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon  -->
+    <link rel="icon" href="../uploads/favicon.ico" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="bookDetails.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="defaultUser.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header id="header-container"></header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <aside>
+        <nav id="sidebar-container"></nav>
+    </aside>
+    <!-- Sidebar End -->
+
+    <main>
+        <!-- Nav Start -->
+        <div style="display: flex;">
+            <a href="userHome.html">
+                <i class='bx bxs-chevron-left' style="margin-top: 28px; margin-left: 28px;"></i>
+            </a>
+            <div id="intro-nav" style="margin-left: 12.5px;">
+                <div class="iconTitle">
+                    <span class="icons"><i class='bx bx-book-open icon'></i></span>
+                    <h1>Book Details</h1>
+                </div>
+                <div class="rightButtons">
+                    <!-- Notification Start -->
+                    <div class="introNavButtons">
+                        <button class="notification-button" onclick="toggleDropdown()">
+                            <i class='bx bx-bell' ></i>
+                        </button>
+                        <div class="dropdown-content" id="notificationDropdown">
+                            <span class="notiTitle">Notifications</span>
+                            <button class="markAllRead" onclick="markAllAsRead()">Mark All as Read</button>
+                            <div id="notificationList"></div>
+                        </div>
+                    </div>
+                    <!-- Notification End -->
+
+                    <!-- Help Button Start -->
+                    <a href="userHelp.html" class="navBtns">
+                        <i class='bx bx-help-circle' ></i>
+                    </a>
+                    <!-- Help Button End -->
+
+                    <!-- Settings Button Start -->
+                    <a href="userSettings.html" class="navBtns">
+                        <i class='bx bx-cog' ></i>
+                    </a>
+                    <!-- Settings Button End -->
+
+                    <!-- Profile Button Start -->
+                    <a href="userProfile.html" class="profBtn">
+                        <button class="userProfile" >
+                            <div id="profPic"></div>
+                            <div>
+                                <p class="userName"></p>
+                                <div id="userBadge">User</div>
+                            </div>
+                        </button>
+                    </a>
+                    <!-- Profile Button End -->
+                </div> 
+            </div>
+        </div>
+        <!-- Nav End -->
+        
+        <!-- Main Contents Start-->
+        <div id="bookDetails-container">
+             <!-- Book Details Start -->
+             <div id="bookDetails">
+                <img id="image" alt="Book Image">
+                <ul id="details">
+                    <li><b>Title :</b> <span id="title"></span></li>
+                    <li><b>Author :</b> <span id="authors"></span></li>
+                    <li><b>Edition :</b> <span id="edition"></span></li>
+                    <li><b>Publisher :</b> <span id="publisher"></span></li>
+                    <li><b>Publication date:</b> <span id="publicationDate"></span></li>
+                    <li><b>Imprint :</b> <span id="imprint"></span></li>
+                    <li><b>ISBN :</b> <span id="isbn"></span></li>
+                    <li><b>Subject Area :</b> <span id="subjectArea"></span></li> 
+                    <li><b>Type of Book :</b> <span id="typeOfBook"></span></li>
+                    <li><b>Location :</b> <span id="location"></span></li>
+                    <li><b>Call number :</b> <span id="callNumber"></span></li>
+                    <li><b>Keywords :</b> <span id="keywords"></span></li>
+                    <li id="availCopy"><b>Available Copies :</b> <span id="available"></span></li>
+                </ul>
+            </div>
+            <!-- Book Details End -->
+
+            <!-- Reserve & Favourites Buttons Start -->
+            <div id="buttons">
+                <button class="reserve" onclick="reserveBook()">Reserve</button>
+                <button class="favourite" id="favouriteButton" onclick="addToFavorites()">
+                    <i id="heartIcon" class="fa fa-heart"></i>
+                </button>
+            </div>
+            <div id="summary">
+                <p id="summary1"></p>
+            </div>
+            <!-- Reserve & Favourites Buttons End -->
+
+            <!-- Book Review Start -->
+            <div id="review">
+                <div id="row1">
+                    <h2 id="rate"></h2>
+                    <div id="rating">
+                        <i id="star1" class="fa fa-star"></i>
+                        <i id="star2" class="fa fa-star"></i>
+                        <i id="star3" class="fa fa-star"></i>
+                        <i id="star4" class="fa fa-star"></i>
+                        <i id="star5" class="fa fa-star"></i>
+                    </div>    
+                    <!-- <button id="see-all-btn">See All</button> -->
+                </div>
+
+                <div class="slide-container swiper" style="margin-bottom: 0px;">
+                    <div id="row2" class="slide-content">
+                        <div class="card-wrapper swiper-wrapper"></div>
+                        <div class="swiper-button-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-navBtn"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div id="write-review">
+                    <button id="write-btn" onclick="writeReview()" >Write Review about this Book</button>
+                </div>
+            </div>
+            <!-- Book Review End -->
+            <div id="review-textfield"> 
+                <div id="overall-rating">
+                    <p id="overall-title"><b>Overall Rating :</b></p>
+                    <div class="star-rating" id="comment_rating">
+                        <i id="overall-star1" class="fa fa-star" onclick="rateA(1)"></i>
+                        <i id="overall-star2" class="fa fa-star" onclick="rateA(2)"></i>
+                        <i id="overall-star3" class="fa fa-star" onclick="rateA(3)"></i>
+                        <i id="overall-star4" class="fa fa-star" onclick="rateA(4)"></i>
+                        <i id="overall-star5" class="fa fa-star" onclick="rateA(5)"></i>
+                    </div>
+                </div>
+                <label for="reviewText">Share your thoughts about the book : </label><br>
+                <div class="typingArea">
+                    <textarea id="reviewText" name="reviewText"></textarea>
+                </div>
+                <button class="cancel-btn" id="cancel" onclick="closeReview()">Cancel</button>
+                <button class="submit-btn" id="submit" onclick="rateBook()">Submit</button>
+            </div>
+        </div>
+        <!-- Main Contents End-->
+    </main>  
+
+    <div id="dialog" style="display:none;">
+        <div id="dialog-content">
+        <h2></h2>
+        <p></p>
+        <button onclick="hideDialog()">Close</button>
+        </div>
+    </div>
+
+    <!-- Chatbox Start -->
+    <button id="toggle-chat" class="circle-button"><i class='bx bxs-message-square-dots' ></i></button>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+    <!-- Chatbox End -->
+
+    <!-- Footer Start -->
+    <footer id="footer-container"></footer>
+    <!-- Footer End -->
+    
+    <script src="swiper-bundle.min.js"></script>
+    <!-- Javascript -->
+    <script src="detailCarousel.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="bookDetails.js"></script>
+    <script src="mainUser.js"></script>  
+    <script src="userChatbox.js"></script>
+    <script src="notification.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
