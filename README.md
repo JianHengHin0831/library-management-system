@@ -14,26 +14,32 @@ A key highlight of this project is the integration of a simple NLP-powered chatb
 This application is divided into two primary components: a comprehensive Admin Portal for library staff and a user-friendly Student Portal.
 👑 Admin Portal (Core Functionality)
 The administrative backend is the heart of the system, equipped with powerful tools for complete library management:
+
 🚀 Efficient Circulation Desk:
 Features integrated support for scanning student ID cards and book QR codes for rapid check-in and check-out processes.
 Automatically calculates and logs late return fees.
+
 📚 Comprehensive Acquisition & Cataloging:
 A complete workflow for registering new acquisitions, from purchase order to shelf-readiness.
 Supports scanning book barcodes (ISBN) to auto-populate title information.
 Auto-generates unique accession numbers and printable QR codes for every new book, ensuring easy tracking.
 Maintains a detailed purchase history for budgeting and reporting.
+
 📊 Analytics Dashboard:
 Provides an at-a-glance overview of key library metrics, such as borrowing trends, popular genres, and total fines collected.
+
 ⚙️ Robust Management Systems:
 Inventory Management: Real-time tracking of book status (available, on loan, overdue, under maintenance) and physical location.
 User Management: A central database of all student profiles, including their borrowing history, contact details, and account status.
 Circulation Control: A powerful interface to monitor all active loans, easily identify overdue items, and manage reservations.
 
-👤 Personalized Dashboard:
+👤 Student Portal:
 Allows students to view their personal borrowing history, currently checked-out books with due dates, pending reservations, and any outstanding fines.
+
 🤖 NLP-Powered Assistant:
 An integrated chatbot designed to answer frequently asked questions about library services (e.g., "What are the library hours?", "How do I reserve a book?").
 The chatbot works by extracting keywords from user queries and calculating cosine similarity to provide the most relevant, instant answer.
+
 🔍 Advanced Search & Discovery:
 Provides a dedicated portal to access the university's subscribed online journals and other digital resources.
 
