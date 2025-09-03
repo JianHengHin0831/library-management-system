@@ -32,8 +32,8 @@ const dbConfig = {
 const transporter = nodemailer.createTransport({ 
     service: 'Outlook',
     auth: {
-        user: 'SEG3_ULMS@outlook.com', 
-        pass: 'Group3SEGProject?' 
+        user: '', //need to change
+        pass: '' //need to change
     }
 });
 
@@ -4094,4 +4094,5 @@ app.post('/checkFavorite', async (req, res) => {
         console.error('Error checking favorite:', error);
         res.status(500).json({ success: false, message: 'Internal server error' });
     }
+
 });
